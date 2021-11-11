@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/model-automotive
+model-automotive.so
+model-automotive.dylib
+model-automotive.dll
+model-automotive.a
+model-automotive.lib
+model-automotive-test-*
+*.exe
+*.o
+*.obj
+*.lst
