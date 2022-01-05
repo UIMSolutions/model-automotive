@@ -1,7 +1,7 @@
-module model.automotive.devices.sensor;
+module models.automotive.devices.sensor;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Sensor attached to or as part of a vehicle or device. May provide signals of device health or usage.
 class DINDDeviceSensor : DOOPEntity {

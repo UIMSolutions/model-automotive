@@ -1,7 +1,7 @@
-module model.automotive.devices.generation;
+module models.automotive.devices.generation;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Specific period in the evolution of a device class over time.
 class DINDDeviceGeneration : DOOPEntity {

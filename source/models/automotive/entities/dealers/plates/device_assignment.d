@@ -1,7 +1,7 @@
-module model.automotive.dealers.plates.device_assignment;
+module models.automotive.dealers.plates.device_assignment;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Record of which dealer plates were used on which vehicle or device over time.
 class DINDDealerPlateDeviceAssignment : DOOPEntity {

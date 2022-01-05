@@ -1,7 +1,7 @@
-module model.automotive.devices.component;
+module models.automotive.devices.component;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Physical or logical part of a vehicle or device.
 class DINDDeviceComponent : DOOPEntity {

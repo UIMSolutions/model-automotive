@@ -1,7 +1,7 @@
-module model.automotive.devices.type;
+module models.automotive.devices.type;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Group of undeleted system users and undeleted teams. DeviceTypes can be used to control access to specific objects.
 class DINDDeviceType : DOOPEntity {

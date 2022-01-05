@@ -1,7 +1,7 @@
-module model.automotive.deals.device_addon;
+module models.automotive.deals.device_addon;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Additional product or service offered with a given vehicle or device in a deal.
 class DINDDealDeviceAddOn : DOOPEntity {

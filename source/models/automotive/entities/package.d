@@ -1,8 +1,8 @@
-module model.automotive;
+module models.automotive.entities;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
-public import model.automotive.dealers;
-public import model.automotive.deals;
-public import model.automotive.devices;
+public import models.automotive.dealers;
+public import models.automotive.deals;
+public import models.automotive.devices;

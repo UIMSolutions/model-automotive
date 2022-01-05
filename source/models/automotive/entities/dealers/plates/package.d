@@ -1,8 +1,8 @@
-module model.automotive.dealers.plates;
+module models.automotive.dealers.plates;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
-public import model.automotive.dealers.plates.plate;
+public import models.automotive.dealers.plates.plate;
 
-public import model.automotive.dealers.plates.device_assignment;
+public import models.automotive.dealers.plates.device_assignment;

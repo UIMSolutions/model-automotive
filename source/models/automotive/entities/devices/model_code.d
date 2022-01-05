@@ -1,7 +1,7 @@
-module model.automotive.devices.model_code;
+module models.automotive.devices.model_code;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Specific configuration of a device, such as a vehicle of specific generation, body style, engine option and transmission.
 class DINDDeviceModelCode : DOOPEntity {

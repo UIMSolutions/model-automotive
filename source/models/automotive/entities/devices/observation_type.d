@@ -1,7 +1,7 @@
-module model.automotive.devices.observation_type;
+module models.automotive.devices.observation_type;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Type of observation, indicating severity and nature of the observation and typically used for classification and filtering of observations.
 class DINDDeviceObservationType : DOOPEntity {

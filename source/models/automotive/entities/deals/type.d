@@ -1,7 +1,7 @@
-module model.automotive.deals.type;
+module models.automotive.deals.type;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Type of deal, such as new car sales, used car sales, heavy equipment sales, and so on.
 class DINDDealType : DOOPEntity {

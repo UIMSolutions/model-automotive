@@ -1,7 +1,7 @@
-module model.automotive.devices.variant;
+module models.automotive.devices.variant;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Standard variant of a device model code, with special characteristics such as a specific OEM-fitted accessory package or being a limited edition.
 class DINDDeviceVariant : DOOPEntity {

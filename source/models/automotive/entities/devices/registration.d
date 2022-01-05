@@ -1,7 +1,7 @@
-module model.automotive.devices.registration;
+module models.automotive.devices.registration;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Record of registrations of a specific vehicle or device to specific customers over time.
 class DINDDeviceRegistration : DOOPEntity {

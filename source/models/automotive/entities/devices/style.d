@@ -1,7 +1,7 @@
-module model.automotive.devices.style;
+module models.automotive.devices.style;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Distinctive form or type of vehicle or device such as sedan or station wagon car, wheeled or crawler excavator, and so on.
 class DINDDeviceStyle : DOOPEntity {

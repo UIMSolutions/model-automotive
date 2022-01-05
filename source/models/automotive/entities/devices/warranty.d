@@ -1,7 +1,7 @@
-module model.automotive.devices.warranty;
+module models.automotive.devices.warranty;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Relationship indicating that a specific warranty applies to a specific vehicle or device.
 class DINDDeviceWarranty : DOOPEntity {

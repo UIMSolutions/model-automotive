@@ -1,7 +1,7 @@
-module model.automotive.deals.file;
+module models.automotive.deals.file;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Container for deals relating to a given opportunity.
 class DINDDealFile : DOOPEntity {

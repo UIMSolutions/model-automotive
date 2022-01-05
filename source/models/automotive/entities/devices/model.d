@@ -1,7 +1,7 @@
-module model.automotive.devices.model;
+module models.automotive.devices.model;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Sub-type of a device class, which may be identified by specific engine option, body styles and other common characteristics. Breaks down further into device model codes.
 class DINDDeviceModel : DOOPEntity {

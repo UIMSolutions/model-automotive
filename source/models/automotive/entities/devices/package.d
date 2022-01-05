@@ -1,30 +1,30 @@
-module model.automotive.devices;
+module models.automotive.devices;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
-public import model.automotive.devices.inspections;
+public import models.automotive.devices.inspections;
 
-public import model.automotive.devices.brand;
-public import model.automotive.devices.class_;
-public import model.automotive.devices.component;
+public import models.automotive.devices.brand;
+public import models.automotive.devices.class_;
+public import models.automotive.devices.component;
 
-public import model.automotive.devices.device;
+public import models.automotive.devices.device;
 
-public import model.automotive.devices.generation;
-public import model.automotive.devices.license_plate;
-public import model.automotive.devices.measure;
-public import model.automotive.devices.measurement;
-public import model.automotive.devices.meter;
-public import model.automotive.devices.model_code;
-public import model.automotive.devices.model;
-public import model.automotive.devices.observation;
-public import model.automotive.devices.observation_type;
-public import model.automotive.devices.registration;
-public import model.automotive.devices.sensor;
-public import model.automotive.devices.state;
-public import model.automotive.devices.style;
-public import model.automotive.devices.type;
-public import model.automotive.devices.variant;
-public import model.automotive.devices.warranty;
-public import model.automotive.devices.warranty_limit;
+public import models.automotive.devices.generation;
+public import models.automotive.devices.license_plate;
+public import models.automotive.devices.measure;
+public import models.automotive.devices.measurement;
+public import models.automotive.devices.meter;
+public import models.automotive.devices.model_code;
+public import models.automotive.devices.model;
+public import models.automotive.devices.observation;
+public import models.automotive.devices.observation_type;
+public import models.automotive.devices.registration;
+public import models.automotive.devices.sensor;
+public import models.automotive.devices.state;
+public import models.automotive.devices.style;
+public import models.automotive.devices.type;
+public import models.automotive.devices.variant;
+public import models.automotive.devices.warranty;
+public import models.automotive.devices.warranty_limit;

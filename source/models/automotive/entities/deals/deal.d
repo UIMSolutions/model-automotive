@@ -1,7 +1,7 @@
-module model.automotive.deals.deal;
+module models.automotive.deals.deal;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Business proposal for the sale of one or more vehicle or device, including optional trade-ins, add-ons and financial terms.
 class DINDDeal : DOOPEntity {

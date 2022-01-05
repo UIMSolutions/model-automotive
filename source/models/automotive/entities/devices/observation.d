@@ -1,7 +1,7 @@
-module model.automotive.devices.observation;
+module models.automotive.devices.observation;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Important observation on the state of a given vehicle or device, typically resulting from an inspection.
 class DINDDeviceObservation : DOOPEntity {

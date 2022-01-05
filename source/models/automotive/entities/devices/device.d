@@ -1,7 +1,7 @@
-module model.automotive.devices.device;
+module models.automotive.devices.device;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Physical piece of equipment of considerable value such as a vehicle or a device such as an excavator, that can be tracked through its entire life cycle of trade, ownership and service and may be related to one or more customers over time.
 class DINDDevice : DOOPEntity {

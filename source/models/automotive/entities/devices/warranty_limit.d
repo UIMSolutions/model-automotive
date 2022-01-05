@@ -1,7 +1,7 @@
-module model.automotive.devices.warranty_limit;
+module models.automotive.devices.warranty_limit;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Limits of a specific warranty on a specific vehicle or device, such as maximum mileage or specific expiration date.
 class DINDDeviceWarrantyLimit : DOOPEntity {

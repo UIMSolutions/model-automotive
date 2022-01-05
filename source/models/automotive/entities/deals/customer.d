@@ -1,7 +1,7 @@
-module model.automotive.deals.customer;
+module models.automotive.deals.customer;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Customer associated with a given deal.
 class DINDDealCustomer : DOOPEntity {

@@ -1,7 +1,7 @@
-module model.automotive.devices.inspections.inspection;
+module models.automotive.devices.inspections.inspection;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Record of inspections carried out on a given vehicle or device over time.
 class DINDDeviceInspection : DOOPEntity {

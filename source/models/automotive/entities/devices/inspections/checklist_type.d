@@ -1,7 +1,7 @@
-module model.automotive.devices.inspections.checklist_type;
+module models.automotive.devices.inspections.checklist_type;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Type of checklist, such as pre-delivery or service.
 class DINDDeviceInspectionChecklistType: DOOPEntity {

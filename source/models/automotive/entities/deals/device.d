@@ -1,7 +1,7 @@
-module model.automotive.deals.device;
+module models.automotive.deals.device;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Vehicle or device that is the subject of a deal, which may involve one or more vehicle or device.
 class DINDDealDevice : DOOPEntity {

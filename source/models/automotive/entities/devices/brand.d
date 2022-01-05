@@ -1,7 +1,7 @@
-module model.automotive.devices.brand;
+module models.automotive.devices.brand;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Brand name of a vehicle or device manufacturer, main vendor for a group of devices or manufacturer or main vendor for supplier items.
 class DINDDeviceBrand : DOOPEntity {

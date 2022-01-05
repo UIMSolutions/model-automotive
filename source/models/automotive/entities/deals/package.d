@@ -1,13 +1,13 @@
-module model.automotive.deals;
+module models.automotive.deals;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
-public import model.automotive.deals.deal;
+public import models.automotive.deals.deal;
 
-public import model.automotive.deals.device_addon;
-public import model.automotive.deals.customer;
-public import model.automotive.deals.device;
-public import model.automotive.deals.file;
-public import model.automotive.deals.term;
-public import model.automotive.deals.type;
+public import models.automotive.deals.device_addon;
+public import models.automotive.deals.customer;
+public import models.automotive.deals.device;
+public import models.automotive.deals.file;
+public import models.automotive.deals.term;
+public import models.automotive.deals.type;

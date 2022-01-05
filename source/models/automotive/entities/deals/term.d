@@ -1,7 +1,7 @@
-module model.automotive.deals.term;
+module models.automotive.deals.term;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Terms applicable a given type of deal.
 class DINDDealTerm : DOOPEntity {

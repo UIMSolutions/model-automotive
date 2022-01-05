@@ -1,7 +1,7 @@
-module model.automotive.devices.measurement;
+module models.automotive.devices.measurement;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Record of usage measurements for a given vehicle or device over time.
 class DINDDeviceMeasurement : DOOPEntity {

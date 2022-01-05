@@ -1,7 +1,7 @@
-module model.automotive.devices.meter;
+module models.automotive.devices.meter;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Usage meter attached to a specific vehicle or device, such as odometer or fuel gauge.
 class DINDMeter : DOOPEntity {

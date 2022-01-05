@@ -1,7 +1,7 @@
-module model.automotive.devices.class_;
+module models.automotive.devices.class_;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Family of vehicles or devices for the specific brand provided by the manufacturer.
 class DINDDeviceClass : DOOPEntity {

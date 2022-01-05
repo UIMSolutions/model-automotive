@@ -1,7 +1,7 @@
-module model.automotive.dealers.plates.plate;
+module models.automotive.dealers.plates.plate;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // License plate applied temporarily to vehicles to provide services such as test drives.
 class DINDDealerPlate : DOOPEntity {

@@ -1,7 +1,7 @@
-module model.automotive.devices.inspections.checklist;
+module models.automotive.devices.inspections.checklist;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Specific checklist of a given type, such as a pre-delivery inspection or a checklist used for a specific type of service.
 class DINDDeviceInspectionChecklist : DOOPEntity {

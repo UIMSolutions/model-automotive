@@ -1,7 +1,7 @@
-module model.automotive.devices.license_plate;
+module models.automotive.devices.license_plate;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Record of license plates assigned to a given vehicle or device over time.
 class DINDDeviceLicensePlate : DOOPEntity {

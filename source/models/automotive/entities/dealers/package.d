@@ -1,6 +1,6 @@
-module model.automotive.dealers;
+module models.automotive.dealers;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
-public import model.automotive.dealers.plates;
+public import models.automotive.dealers.plates;

@@ -1,7 +1,7 @@
-module model.automotive.devices.measure;
+module models.automotive.devices.measure;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Specific measurable quantity related to a vehicle or device that is used to track usage over time, such as miles driven, engine hours or time since purchase.
 class DINDDeviceMeasure : DOOPEntity {

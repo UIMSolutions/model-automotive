@@ -1,7 +1,7 @@
-module model.automotive.devices.state;
+module models.automotive.devices.state;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
 // Describes state of a vehicle or device, such as New, Used or Scrapped.
 class DINDDeviceState : DOOPEntity {
