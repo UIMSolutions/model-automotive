@@ -1,9 +1,9 @@
-module model.automotive.devices.inspections;
+module models.automotive.devices.inspections;
 
 @safe:
-import model.automotive;
+import models.automotive;;
 
-public import model.automotive.devices.inspections.inspection;
+public import models.automotive.devices.inspections.inspection;
 
-public import model.automotive.devices.inspections.checklist;
-public import model.automotive.devices.inspections.checklist_type;
+public import models.automotive.devices.inspections.checklist;
+public import models.automotive.devices.inspections.checklist_type;
