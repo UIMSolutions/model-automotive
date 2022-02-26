@@ -1,52 +1,45 @@
-module models.automotive.deals.term;
+module models.automotive.entities.deals.term;
 
 @safe:
-import models.automotive;;
+import models.automotive;
 
 // Terms applicable a given type of deal.
-class DINDDealTerm : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
-      "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
-      "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
-      "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
-      "ownerId": OOPAttributeUUID.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
-      "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-      "owningUserId": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
-      "owningTeamId": OOPAttributeLink("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
-      "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "dealTermId": OOPAttributeUUID.descriptions(["en":"Unique identifier for entity instances"]),
-      "dealTypeId": OOPAttributeUUID.descriptions(["en":"Type of deal associated with these terms."]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Deal Term"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Deal Term"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-    ]);
+class DATMDealTerm : DOOPEntity {
+  mixin(OOPEntityThis!("ATMDealTerm"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
+        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
+        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
+        "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
+        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
+        "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
+        "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
+        "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+        "dealTermId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
+        "dealTypeId": OOPUUIDAttribute.descriptions(["en":"Type of deal associated with these terms."]),
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Deal Term"]),
+        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Deal Term"]),
+        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      ])
+      .registerPath("automotive_dealterms");
   }
-
-  override string entityClass() { return "indDealTerm"; }
-  override string entityClasses() { return "indDealTerms"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto INDDealTerm() { return new DINDDealTerm; } 
-auto INDDealTerm(Json json) { return new DINDDealTerm(json); } 
+mixin(OOPEntityCalls!("ATMDealTerm"));
 
 unittest {
   version(uim_entities) {
-    assert(INDDealTerm);
+    assert(ATMDealTerm);
 
-  auto entity = INDDealTerm;
+  auto entity = ATMDealTerm;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

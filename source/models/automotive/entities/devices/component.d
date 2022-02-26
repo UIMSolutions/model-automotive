@@ -1,66 +1,59 @@
-module models.automotive.devices.component;
+module models.automotive.entities.devices.component;
 
 @safe:
-import models.automotive;;
+import models.automotive;
 
 // Physical or logical part of a vehicle or device.
-class DINDDeviceComponent : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
-      "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
-      "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
-      "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
-      "ownerId": OOPAttributeUUID.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
-      "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-      "owningUserId": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
-      "owningTeamId": OOPAttributeLink("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
-      "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "entityImage": OOPAttributeString.descriptions(["en":""]),
-      "behavior": OOPAttributeString.descriptions(["en":"Describes if the component is fixed, movable or replaceable."]),
-      "behavior_display": OOPAttributeString.descriptions(["en":""]),
-      "componentDeviceId": OOPAttributeUUID.descriptions(["en":"Reference to a separate sub-device that the component may represent."]),
-      "configurationOptionId": OOPAttributeUUID.descriptions(["en":"Specific option for the component on the device."]),
-      "deviceComponentId": OOPAttributeUUID.descriptions(["en":"Unique identifier for entity instances"]),
-      "deviceId": OOPAttributeUUID.descriptions(["en":"Parent vehicle or device that contains the component."]),
-      "deviceMeterId": OOPAttributeUUID.descriptions(["en":"Reference to a meter that the component may represent."]),
-      "deviceSensorId": OOPAttributeUUID.descriptions(["en":"Reference to a sensor that the component may represent."]),
-      "itemName": OOPAttributeString.descriptions(["en":"Name of the component."]),
-      "parentComponentId": OOPAttributeUUID.descriptions(["en":"Larger component for which the component is a part."]),
-      "quantity": OOPAttributeString.descriptions(["en":"Number of component needed."]),
-      "serialNumber": OOPAttributeNumber.descriptions(["en":"Unique number for component."]),
-      "specificationAccessoryId": OOPAttributeUUID.descriptions(["en":"Accessory for which the component is a part."]),
-      "type": OOPAttributeString.descriptions(["en":"Type of component (standard, option, accessory, device, meter, sensor or custom)."]),
-      "type_display": OOPAttributeString.descriptions(["en":""]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Device Component"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Device Component"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":"automotive/"])
-    ]);
+class DATMDeviceComponent : DOOPEntity {
+  mixin(OOPEntityThis!("ATMDeviceComponent"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
+        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
+        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
+        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
+        "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
+        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
+        "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
+        "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
+        "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+        "entityImage": OOPStringAttribute.descriptions(["en":""]),
+        "behavior": OOPStringAttribute.descriptions(["en":"Describes if the component is fixed, movable or replaceable."]),
+        "behavior_display": OOPStringAttribute.descriptions(["en":""]),
+        "componentDeviceId": OOPUUIDAttribute.descriptions(["en":"Reference to a separate sub-device that the component may represent."]),
+        "configurationOptionId": OOPUUIDAttribute.descriptions(["en":"Specific option for the component on the device."]),
+        "deviceComponentId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
+        "deviceId": OOPUUIDAttribute.descriptions(["en":"Parent vehicle or device that contains the component."]),
+        "deviceMeterId": OOPUUIDAttribute.descriptions(["en":"Reference to a meter that the component may represent."]),
+        "deviceSensorId": OOPUUIDAttribute.descriptions(["en":"Reference to a sensor that the component may represent."]),
+        "itemName": OOPStringAttribute.descriptions(["en":"Name of the component."]),
+        "parentComponentId": OOPUUIDAttribute.descriptions(["en":"Larger component for which the component is a part."]),
+        "quantity": OOPStringAttribute.descriptions(["en":"Number of component needed."]),
+        "serialNumber": OOPIntegerAttribute.descriptions(["en":"Unique number for component."]),
+        "specificationAccessoryId": OOPUUIDAttribute.descriptions(["en":"Accessory for which the component is a part."]),
+        "type": OOPStringAttribute.descriptions(["en":"Type of component (standard, option, accessory, device, meter, sensor or custom)."]),
+        "type_display": OOPStringAttribute.descriptions(["en":""]),
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Device Component"]),
+        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Device Component"]),
+        "statusCode_display": OOPStringAttribute.descriptions(["en":"automotive/"])
+      ])
+      .registerPath("automotive_devicecomponents");
   }
-
-  override string entityClass() { return "indDeviceComponent"; }
-  override string entityClasses() { return "indDeviceComponents"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto INDDeviceComponent() { return new DINDDeviceComponent; } 
-auto INDDeviceComponent(Json json) { return new DINDDeviceComponent(json); } 
+mixin(OOPEntityCalls!("ATMDeviceComponent"));
 
 unittest {
   version(uim_entities) {
-    assert(INDDeviceComponent);
+    assert(ATMDeviceComponent);
   
-  auto entity = INDDeviceComponent;
+  auto entity = ATMDeviceComponent;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

@@ -1,57 +1,50 @@
-module models.automotive.devices.license_plate;
+module models.automotive.entities.devices.license_plate;
 
 @safe:
-import models.automotive;;
+import models.automotive;
 
 // Record of license plates assigned to a given vehicle or device over time.
-class DINDDeviceLicensePlate : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
-      "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
-      "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
-      "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
-      "ownerId": OOPAttributeUUID.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
-      "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-      "owningUserId": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
-      "owningTeamId": OOPAttributeLink("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
-      "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "comments": OOPAttributeString.descriptions(["en":"Notes or remarks about the license plate."]),
-      "deviceId": OOPAttributeUUID.descriptions(["en":"Vehicle for which the license plate is registered."]),
-      "deviceLicensePlateId": OOPAttributeUUID.descriptions(["en":"Unique identifier for entity instances"]),
-      "issuedBy": OOPAttributeLink("aplUser").descriptions(["en":"Issuer of the license plate."]),
-      "registrationNumber": OOPAttributeNumber.descriptions(["en":"Name of the vehicle license plate."]),
-      "validFrom": OOPAttributeString.descriptions(["en":"First day for which the license plate is valid."]),
-      "validTo": OOPAttributeString.descriptions(["en":"Last day for which the license plate is valid."]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Device License Plate"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Device License Plate"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-    ]);
+class DATMDeviceLicensePlate : DOOPEntity {
+  mixin(OOPEntityThis!("ATMDeviceLicensePlate"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
+        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
+        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
+        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
+        "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
+        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
+        "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
+        "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
+        "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+        "comments": OOPStringAttribute.descriptions(["en":"Notes or remarks about the license plate."]),
+        "deviceId": OOPUUIDAttribute.descriptions(["en":"Vehicle for which the license plate is registered."]),
+        "deviceLicensePlateId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
+        "issuedBy": OOPLinkAttribute("aplUser").descriptions(["en":"Issuer of the license plate."]),
+        "registrationNumber": OOPIntegerAttribute.descriptions(["en":"Name of the vehicle license plate."]),
+        "validFrom": OOPStringAttribute.descriptions(["en":"First day for which the license plate is valid."]),
+        "validTo": OOPStringAttribute.descriptions(["en":"Last day for which the license plate is valid."]),
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Device License Plate"]),
+        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Device License Plate"]),
+        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      ])
+      .registerPath("automotive_devicelicenseplates");
   }
-
-  override string entityClass() { return "indDeviceLicensePlate"; }
-  override string entityClasses() { return "indDeviceLicensePlates"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto INDDeviceLicensePlate() { return new DINDDeviceLicensePlate; } 
-auto INDDeviceLicensePlate(Json json) { return new DINDDeviceLicensePlate(json); } 
+mixin(OOPEntityCalls!("ATMDeviceLicensePlate"));
 
 unittest {
   version(uim_entities) {
-    assert(INDDeviceLicensePlate);
+    assert(ATMDeviceLicensePlate);
   
-  auto entity = INDDeviceLicensePlate;
+  auto entity = ATMDeviceLicensePlate;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

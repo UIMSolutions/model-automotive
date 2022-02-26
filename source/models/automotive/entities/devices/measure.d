@@ -1,53 +1,46 @@
-module models.automotive.devices.measure;
+module models.automotive.entities.devices.measure;
 
 @safe:
-import models.automotive;;
+import models.automotive;
 
 // Specific measurable quantity related to a vehicle or device that is used to track usage over time, such as miles driven, engine hours or time since purchase.
-class DINDDeviceMeasure : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
-      "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
-      "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
-      "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
-      "ownerId": OOPAttributeUUID.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
-      "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-      "owningUserId": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
-      "owningTeamId": OOPAttributeLink("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
-      "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "deviceMeasureId": OOPAttributeUUID.descriptions(["en":"Unique identifier for entity instances"]),
-      "displayNumberOfDecimals": OOPAttributeString.descriptions(["en":"The number for decimals to display for the measurement value."]),
-      "unitId": OOPAttributeUUID.descriptions(["en":"Unit used for the measurement."]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Device Measure"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Device Measurec"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-    ]);
+class DATMDeviceMeasure : DOOPEntity {
+  mixin(OOPEntityThis!("ATMDeviceMeasure"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
+        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
+        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
+        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
+        "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
+        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
+        "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
+        "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
+        "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+        "deviceMeasureId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
+        "displayNumberOfDecimals": OOPStringAttribute.descriptions(["en":"The number for decimals to display for the measurement value."]),
+        "unitId": OOPUUIDAttribute.descriptions(["en":"Unit used for the measurement."]),
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Device Measure"]),
+        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Device Measurec"]),
+        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      ])
+      .registerPath("automotive_devicemeasures");
   }
-
-  override string entityClass() { return "indDeviceMeasure"; }
-  override string entityClasses() { return "indDeviceMeasures"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto INDDeviceMeasure() { return new DINDDeviceMeasure; } 
-auto INDDeviceMeasure(Json json) { return new DINDDeviceMeasure(json); } 
+mixin(OOPEntityCalls!("ATMDeviceMeasure"));
 
 unittest {
   version(uim_entities) {
-    assert(INDDeviceMeasure);
+    assert(ATMDeviceMeasure);
   
-  auto entity = INDDeviceMeasure;
+  auto entity = ATMDeviceMeasure;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

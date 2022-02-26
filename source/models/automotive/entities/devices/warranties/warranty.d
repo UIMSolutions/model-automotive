@@ -1,19 +1,19 @@
-module models.automotive.entities.devices.meter;
+module models.automotive.entities.devices.warranties.warranty;
 
 @safe:
 import models.automotive;
 
-// Usage meter attached to a specific vehicle or device, such as odometer or fuel gauge.
-class DATMMeter : DOOPEntity {
-  mixin(OOPEntityThis!("ATMMeter"));
+// Relationship indicating that a specific warranty applies to a specific vehicle or device.
+class DATMDeviceWarranty : DOOPEntity {
+  mixin(OOPEntityThis!("ATMDeviceWarranty"));
   
   override void initialize() {
     super.initialize;
 
     this
       .attributes([
-        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
-        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
+        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated. "]),
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record. "]),
         "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id "]),
@@ -23,29 +23,27 @@ class DATMMeter : DOOPEntity {
         "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record. "]),
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only. "]),
         "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created. "]),
-        "deviceId": OOPUUIDAttribute.descriptions(["en":"Parent device for this device meter. "]),
-        "deviceMeasureId": OOPUUIDAttribute.descriptions(["en":"Type of measurement for this device meter. "]),
-        "deviceMeterId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances "]),
-        "expectedMaximum": OOPStringAttribute.descriptions(["en":"The anticipated maximum amount. "]),
-        "expectedMinimum": OOPStringAttribute.descriptions(["en":"The anticipated minimum amount. "]),
-        "isPrimary": OOPStringAttribute.descriptions(["en":"Is this the primary device? "]),
-        "offset": OOPStringAttribute.descriptions(["en":"Any variation from the original settings. "]),
-        "serialNumber": OOPIntegerAttribute.descriptions(["en":"Unique number of the device meter. "]),
-        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Device Meter "]),
+        "deviceId": OOPUUIDAttribute.descriptions(["en":"Vehicle or device for which this warranty applies. "]),
+        "deviceWarrantyId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances "]),
+        "issuedOn": OOPTimestampAttribute.descriptions(["en":"Date that the warranty is issued. "]),
+        "validFrom": OOPStringAttribute.descriptions(["en":"Last date for which the warranty is valid. "]),
+        "validTo": OOPStringAttribute.descriptions(["en":"First date for which the warranty is valid. "]),
+        "warrantyId": OOPUUIDAttribute.descriptions(["en":"Warranty that is applied to this device. "]),
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Device Warranty "]),
         "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
-        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Device Meter "]),
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Device Warranty "]),
         "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
       ])
-      .registerPath("automotive_meters");
+      .registerPath("automotive_devicewarranties");
   }
 }
-mixin(OOPEntityCalls!("ATMMeter"));
+mixin(OOPEntityCalls!("ATMDeviceWarranty"));
 
 unittest {
   version(uim_entities) {
-    assert(ATMMeter);
+    assert(ATMDeviceWarranty);
   
-  auto entity = ATMMeter;
+  auto entity = ATMDeviceWarranty;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

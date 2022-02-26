@@ -1,58 +1,51 @@
-module models.automotive.devices.model;
+module models.automotive.entities.devices.model;
 
 @safe:
-import models.automotive;;
+import models.automotive;
 
 // Sub-type of a device class, which may be identified by specific engine option, body styles and other common characteristics. Breaks down further into device model codes.
-class DINDDeviceModel : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
-      "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
-      "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated. "]),
-      "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Unique identifier of the data import or data migration that created this record. "]),
-      "ownerId": OOPAttributeUUID.descriptions(["en":"Owner Id "]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team. "]),
-      "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record "]),
-      "owningUserId": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity. "]),
-      "owningTeamId": OOPAttributeLink("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record. "]),
-      "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only. "]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created. "]),
-      "entityImage": OOPAttributeString.descriptions(["en":""]),
-      "code": OOPAttributeString.descriptions(["en":"Unique code for this model. "]),
-      "deviceBrandId": OOPAttributeUUID.descriptions(["en":"Brand of the model. "]),
-      "deviceClassId": OOPAttributeUUID.descriptions(["en":"Class of the model. "]),
-      "deviceGenerationId": OOPAttributeUUID.descriptions(["en":"Generation of the model. "]),
-      "deviceModelId": OOPAttributeUUID.descriptions(["en":"Unique identifier for entity instances "]),
-      "deviceStyleId": OOPAttributeUUID.descriptions(["en":"Style of the model. "]),
-      "deviceTypeId": OOPAttributeUUID.descriptions(["en":"Type of device for this model. "]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Device Model "]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Device Model "]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-    ]);
+class DATMDeviceModel : DOOPEntity {
+  mixin(OOPEntityThis!("ATMDeviceModel"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
+        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
+        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated. "]),
+        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record. "]),
+        "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id "]),
+        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team. "]),
+        "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record "]),
+        "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity. "]),
+        "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record. "]),
+        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only. "]),
+        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created. "]),
+        "entityImage": OOPStringAttribute.descriptions(["en":""]),
+        "code": OOPStringAttribute.descriptions(["en":"Unique code for this model. "]),
+        "deviceBrandId": OOPUUIDAttribute.descriptions(["en":"Brand of the model. "]),
+        "deviceClassId": OOPUUIDAttribute.descriptions(["en":"Class of the model. "]),
+        "deviceGenerationId": OOPUUIDAttribute.descriptions(["en":"Generation of the model. "]),
+        "deviceModelId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances "]),
+        "deviceStyleId": OOPUUIDAttribute.descriptions(["en":"Style of the model. "]),
+        "deviceTypeId": OOPUUIDAttribute.descriptions(["en":"Type of device for this model. "]),
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Device Model "]),
+        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Device Model "]),
+        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      ])
+      .registerPath("automotive_devicemodels");
   }
-
-  override string entityClass() { return "indDeviceModel"; }
-  override string entityClasses() { return "indDeviceModels"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto INDDeviceModel() { return new DINDDeviceModel; } 
-auto INDDeviceModel(Json json) { return new DINDDeviceModel(json); } 
+mixin(OOPEntityCalls!("ATMDeviceModel"));
 
 unittest {
   version(uim_entities) {
-    assert(INDDeviceModel);
+    assert(ATMDeviceModel);
   
-  auto entity = INDDeviceModel;
+  auto entity = ATMDeviceModel;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

@@ -1,57 +1,50 @@
-module models.automotive.devices.inspections.inspection;
+module models.automotive.entities.devices.inspections.inspection;
 
 @safe:
-import models.automotive;;
+import models.automotive;
 
 // Record of inspections carried out on a given vehicle or device over time.
-class DINDDeviceInspection : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
-      "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
-      "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
-      "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
-      "ownerId": OOPAttributeUUID.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
-      "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-      "owningUserId": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
-      "owningTeamId": OOPAttributeLink("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
-      "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "deviceId": OOPAttributeUUID.descriptions(["en":"Vehicle or device being inspected."]),
-      "deviceInspectionChecklistId": OOPAttributeUUID.descriptions(["en":"Inspection checklist used for the inspection."]),
-      "deviceInspectionId": OOPAttributeUUID.descriptions(["en":"Unique identifier for entity instances"]),
-      "result": OOPAttributeString.descriptions(["en":"Outcome of inspection (pending, pass, warning or fail)."]),
-      "result_display": OOPAttributeString.descriptions(["en":""]),
-      "serviceAppointmentId": OOPAttributeUUID.descriptions(["en":"Service appointment at which this inspection was conducted."]),
-      "serviceOrderId": OOPAttributeUUID.descriptions(["en":"Service order being worked during this inspection."]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Device Inspection"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Device Inspection"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-    ]);
+class DATMDeviceInspection : DOOPEntity {
+  mixin(OOPEntityThis!("ATMDeviceInspection"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
+        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
+        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
+        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
+        "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
+        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
+        "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
+        "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
+        "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+        "deviceId": OOPUUIDAttribute.descriptions(["en":"Vehicle or device being inspected."]),
+        "deviceInspectionChecklistId": OOPUUIDAttribute.descriptions(["en":"Inspection checklist used for the inspection."]),
+        "deviceInspectionId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
+        "result": OOPStringAttribute.descriptions(["en":"Outcome of inspection (pending, pass, warning or fail)."]),
+        "result_display": OOPStringAttribute.descriptions(["en":""]),
+        "serviceAppointmentId": OOPUUIDAttribute.descriptions(["en":"Service appointment at which this inspection was conducted."]),
+        "serviceOrderId": OOPUUIDAttribute.descriptions(["en":"Service order being worked during this inspection."]),
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Device Inspection"]),
+        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Device Inspection"]),
+        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      ])
+      .registerPath("automotive_deviceinspections");
   }
-
-  override string entityClass() { return "indDeviceInspection"; }
-  override string entityClasses() { return "indDeviceInspections"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto INDDeviceInspection() { return new DINDDeviceInspection; } 
-auto INDDeviceInspection(Json json) { return new DINDDeviceInspection(json); } 
+mixin(OOPEntityCalls!("ATMDeviceInspection"));
 
 unittest {
   version(uim_entities) {
-    assert(INDDeviceInspection);
+    assert(ATMDeviceInspection);
   
-  auto entity = INDDeviceInspection;
+  auto entity = ATMDeviceInspection;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 
