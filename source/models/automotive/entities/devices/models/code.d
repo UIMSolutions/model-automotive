@@ -1,11 +1,11 @@
-module models.automotive.entities.devices.observation;
+module source.models.automotive.entities.devices.models.code;
 
 @safe:
 import models.automotive;
 
-// Important observation on the state of a given vehicle or device, typically resulting from an inspection.
-class DATMDeviceObservation : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceObservation"));
+// Specific configuration of a device, such as a vehicle of specific generation, body style, engine option and transmission.
+class DATMDeviceModelCode : DOOPEntity {
+  mixin(OOPEntityThis!("ATMDeviceModelCode"));
   
   override void initialize() {
     super.initialize;
@@ -23,29 +23,31 @@ class DATMDeviceObservation : DOOPEntity {
         "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record. "]),
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only. "]),
         "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created. "]),
-        "deviceId": OOPUUIDAttribute.descriptions(["en":"Vehicle or device for which the observation applies. "]),
-        "deviceInspectionId": OOPUUIDAttribute.descriptions(["en":"Parent inspection record for the observation. "]),
-        "deviceObservationId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances "]),
-        "deviceObservationTypeId": OOPUUIDAttribute.descriptions(["en":"The observation documented for this vehicle or device. "]),
-        "serviceAppointmentId": OOPUUIDAttribute.descriptions(["en":"Parent service appointment booked when this observation was documented. "]),
-        "serviceOrderId": OOPUUIDAttribute.descriptions(["en":"Parent service order being worked when this observation was documented. "]),
-        "severity": OOPStringAttribute.descriptions(["en":"Severity level (observation, warning of failure). "]),
-        "severity_display": OOPStringAttribute.descriptions(["en":""]),
-        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Device Observation "]),
+        "entityImage": OOPStringAttribute.descriptions(["en":""]),
+        "code": OOPStringAttribute.descriptions(["en":"Unique code for this device model. "]),
+        "deviceBrandId": OOPUUIDAttribute.descriptions(["en":"Brand of the model code. "]),
+        "deviceClassId": OOPUUIDAttribute.descriptions(["en":"Class of the model code. "]),
+        "deviceGenerationId": OOPUUIDAttribute.descriptions(["en":"Generation of the model code. "]),
+        "deviceModelCodeId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances "]),
+        "deviceModelId": OOPUUIDAttribute.descriptions(["en":"Model of the model code. "]),
+        "deviceStyleId": OOPUUIDAttribute.descriptions(["en":"Body style of the model code. "]),
+        "deviceTypeId": OOPUUIDAttribute.descriptions(["en":"Type of device for this model. "]),
+        "specificationId": OOPUUIDAttribute.descriptions(["en":"Specification of this model code. "]),
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Device Model Code "]),
         "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
-        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Device Observation "]),
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Device Model Code "]),
         "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
       ])
-      .registerPath("automotive_deviceobservations");
+      .registerPath("automotive_devicemodelcodes");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceObservation"));
+mixin(OOPEntityCalls!("ATMDeviceModelCode"));
 
 unittest {
   version(uim_entities) {
-    assert(ATMDeviceObservation);
+    assert(ATMDeviceModelCode);
   
-  auto entity = ATMDeviceObservation;
+  auto entity = ATMDeviceModelCode;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

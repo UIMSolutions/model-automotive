@@ -1,4 +1,4 @@
-module models.automotive.entities.devices.observation_type;
+module models.automotive.entities.devices.observations.type;
 
 @safe:
 import models.automotive;
