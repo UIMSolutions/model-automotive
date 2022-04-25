@@ -5,7 +5,7 @@ import models.automotive;
 
 // Usage meter attached to a specific vehicle or device, such as odometer or fuel gauge.
 class DATMMeter : DOOPEntity {
-  mixin(OOPEntityThis!("ATMMeter"));
+  mixin(EntityThis!("ATMMeter"));
   
   override void initialize() {
     super.initialize;
@@ -39,7 +39,7 @@ class DATMMeter : DOOPEntity {
       .registerPath("automotive_meters");
   }
 }
-mixin(OOPEntityCalls!("ATMMeter"));
+mixin(EntityCalls!("ATMMeter"));
 
 unittest {
   version(uim_entities) {

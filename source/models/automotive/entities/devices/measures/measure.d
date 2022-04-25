@@ -5,7 +5,7 @@ import models.automotive;
 
 // Specific measurable quantity related to a vehicle or device that is used to track usage over time, such as miles driven, engine hours or time since purchase.
 class DATMDeviceMeasure : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceMeasure"));
+  mixin(EntityThis!("ATMDeviceMeasure"));
   
   override void initialize() {
     super.initialize;
@@ -34,7 +34,7 @@ class DATMDeviceMeasure : DOOPEntity {
       .registerPath("automotive_devicemeasures");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceMeasure"));
+mixin(EntityCalls!("ATMDeviceMeasure"));
 
 unittest {
   version(uim_entities) {

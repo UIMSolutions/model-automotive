@@ -5,7 +5,7 @@ import models.automotive;
 
 // Group of undeleted system users and undeleted teams. DeviceTypes can be used to control access to specific objects.
 class DATMDeviceType : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceType"));
+  mixin(EntityThis!("ATMDeviceType"));
   
   override void initialize() {
     super.initialize;
@@ -34,7 +34,7 @@ class DATMDeviceType : DOOPEntity {
       .registerPath("automotive_devicetypes");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceType"));
+mixin(EntityCalls!("ATMDeviceType"));
 
 unittest {
   version(uim_entities) {

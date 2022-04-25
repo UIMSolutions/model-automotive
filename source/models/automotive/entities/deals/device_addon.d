@@ -5,7 +5,7 @@ import models.automotive;
 
 // Additional product or service offered with a given vehicle or device in a deal.
 class DATMDealDeviceAddOn : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDealDeviceAddOn"));
+  mixin(EntityThis!("ATMDealDeviceAddOn"));
   
   override void initialize() {
     super.initialize;
@@ -42,7 +42,7 @@ class DATMDealDeviceAddOn : DOOPEntity {
       .registerPath("automotive_dealdeviceaddons");
   }
 }
-mixin(OOPEntityCalls!("ATMDealDeviceAddOn"));
+mixin(EntityCalls!("ATMDealDeviceAddOn"));
 
 unittest {
   version(uim_entities) {

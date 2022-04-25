@@ -5,7 +5,7 @@ import models.automotive;
 
 // Important observation on the state of a given vehicle or device, typically resulting from an inspection.
 class DATMDeviceObservation : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceObservation"));
+  mixin(EntityThis!("ATMDeviceObservation"));
   
   override void initialize() {
     super.initialize;
@@ -39,7 +39,7 @@ class DATMDeviceObservation : DOOPEntity {
       .registerPath("automotive_deviceobservations");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceObservation"));
+mixin(EntityCalls!("ATMDeviceObservation"));
 
 unittest {
   version(uim_entities) {

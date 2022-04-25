@@ -5,7 +5,7 @@ import models.automotive;
 
 // Specific period in the evolution of a device class over time.
 class DATMDeviceGeneration : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceGeneration"));
+  mixin(EntityThis!("ATMDeviceGeneration"));
   
   override void initialize() {
     super.initialize;
@@ -38,7 +38,7 @@ class DATMDeviceGeneration : DOOPEntity {
       .registerPath("automotive_devicegenerations");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceGeneration"));
+mixin(EntityCalls!("ATMDeviceGeneration"));
 
 unittest {
   version(uim_entities) {

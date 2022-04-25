@@ -5,7 +5,7 @@ import models.automotive;
 
 // Limits of a specific warranty on a specific vehicle or device, such as maximum mileage or specific expiration date.
 class DATMDeviceWarrantyLimit : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceWarrantyLimit"));
+  mixin(EntityThis!("ATMDeviceWarrantyLimit"));
   
   override void initialize() {
     super.initialize;
@@ -37,7 +37,7 @@ class DATMDeviceWarrantyLimit : DOOPEntity {
       .registerPath("automotive_devicewarrantylimits");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceWarrantyLimit"));
+mixin(EntityCalls!("ATMDeviceWarrantyLimit"));
 
 unittest {
   version(uim_entities) {

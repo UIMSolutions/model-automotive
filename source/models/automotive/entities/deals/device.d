@@ -5,7 +5,7 @@ import models.automotive;
 
 // Vehicle or device that is the subject of a deal, which may involve one or more vehicle or device.
 class DATMDealDevice : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDealDevice"));
+  mixin(EntityThis!("ATMDealDevice"));
   
   override void initialize() {
     super.initialize;
@@ -48,7 +48,7 @@ class DATMDealDevice : DOOPEntity {
       .registerPath("automotive_dealdevices");
   }
 }
-mixin(OOPEntityCalls!("ATMDealDevice"));
+mixin(EntityCalls!("ATMDealDevice"));
 
 unittest {
   version(uim_entities) {

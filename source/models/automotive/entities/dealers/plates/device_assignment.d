@@ -5,7 +5,7 @@ import models.automotive;
 
 // Record of which dealer plates were used on which vehicle or device over time.
 class DATMDealerPlateDeviceAssignment : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDealerPlateDeviceAssignment"));
+  mixin(EntityThis!("ATMDealerPlateDeviceAssignment"));
   
   override void initialize() {
     super.initialize;
@@ -38,7 +38,7 @@ class DATMDealerPlateDeviceAssignment : DOOPEntity {
       .registerPath("automotive_dealerplatedeviceassignments");
   }
 }
-mixin(OOPEntityCalls!("ATMDealerPlateDeviceAssignment"));
+mixin(EntityCalls!("ATMDealerPlateDeviceAssignment"));
 
 unittest {
   version(uim_entities) {

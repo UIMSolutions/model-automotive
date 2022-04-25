@@ -5,7 +5,7 @@ import models.automotive;
 
 // Distinctive form or type of vehicle or device such as sedan or station wagon car, wheeled or crawler excavator, and so on.
 class DATMDeviceStyle : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceStyle"));
+  mixin(EntityThis!("ATMDeviceStyle"));
   
   override void initialize() {
     super.initialize;
@@ -35,7 +35,7 @@ class DATMDeviceStyle : DOOPEntity {
       .registerPath("automotive_devicestyles");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceStyle"));
+mixin(EntityCalls!("ATMDeviceStyle"));
 
 unittest {
   version(uim_entities) {

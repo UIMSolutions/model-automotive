@@ -5,7 +5,7 @@ import models.automotive;
 
 // Standard variant of a device model code, with special characteristics such as a specific OEM-fitted accessory package or being a limited edition.
 class DATMDeviceVariant : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceVariant"));
+  mixin(EntityThis!("ATMDeviceVariant"));
   
   override void initialize() {
     super.initialize;
@@ -42,7 +42,7 @@ class DATMDeviceVariant : DOOPEntity {
       .registerPath("automotive_devicevariants");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceVariant"));
+mixin(EntityCalls!("ATMDeviceVariant"));
 
 unittest {
   version(uim_entities) {

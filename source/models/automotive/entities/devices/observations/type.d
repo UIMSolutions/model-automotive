@@ -5,7 +5,7 @@ import models.automotive;
 
 // Type of observation, indicating severity and nature of the observation and typically used for classification and filtering of observations.
 class DATMDeviceObservationType : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceObservationType"));
+  mixin(EntityThis!("ATMDeviceObservationType"));
   
   override void initialize() {
     super.initialize;
@@ -36,7 +36,7 @@ class DATMDeviceObservationType : DOOPEntity {
       .registerPath("automotive_deviceolbservationtypes");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceObservationType"));
+mixin(EntityCalls!("ATMDeviceObservationType"));
 
 unittest {
   version(uim_entities) {

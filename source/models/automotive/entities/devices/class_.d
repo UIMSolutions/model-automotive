@@ -5,7 +5,7 @@ import models.automotive;
 
 // Family of vehicles or devices for the specific brand provided by the manufacturer.
 class DATMDeviceClass : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceClass"));
+  mixin(EntityThis!("ATMDeviceClass"));
   
   override void initialize() {
     super.initialize;
@@ -36,7 +36,7 @@ class DATMDeviceClass : DOOPEntity {
       .registerPath("automotive_deviceclasses");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceClass"));
+mixin(EntityCalls!("ATMDeviceClass"));
 
 unittest {
   version(uim_entities) {

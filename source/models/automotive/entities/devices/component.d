@@ -5,7 +5,7 @@ import models.automotive;
 
 // Physical or logical part of a vehicle or device.
 class DATMDeviceComponent : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceComponent"));
+  mixin(EntityThis!("ATMDeviceComponent"));
   
   override void initialize() {
     super.initialize;
@@ -47,7 +47,7 @@ class DATMDeviceComponent : DOOPEntity {
       .registerPath("automotive_devicecomponents");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceComponent"));
+mixin(EntityCalls!("ATMDeviceComponent"));
 
 unittest {
   version(uim_entities) {

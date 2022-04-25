@@ -5,7 +5,7 @@ import models.automotive;
 
 // Record of usage measurements for a given vehicle or device over time.
 class DATMDeviceMeasurement : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceMeasurement"));
+  mixin(EntityThis!("ATMDeviceMeasurement"));
   
   override void initialize() {
     super.initialize;
@@ -40,7 +40,7 @@ class DATMDeviceMeasurement : DOOPEntity {
       .registerPath("automotive_devicemeasurements");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceMeasurement"));
+mixin(EntityCalls!("ATMDeviceMeasurement"));
 
 unittest {
   version(uim_entities) {

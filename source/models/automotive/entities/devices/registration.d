@@ -5,7 +5,7 @@ import models.automotive;
 
 // Record of registrations of a specific vehicle or device to specific customers over time.
 class DATMDeviceRegistration : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceRegistration"));
+  mixin(EntityThis!("ATMDeviceRegistration"));
   
   override void initialize() {
     super.initialize;
@@ -41,7 +41,7 @@ class DATMDeviceRegistration : DOOPEntity {
       .registerPath("automotive_deviceregistrations");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceRegistration"));
+mixin(EntityCalls!("ATMDeviceRegistration"));
 
 unittest {
   version(uim_entities) {

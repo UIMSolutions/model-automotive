@@ -5,7 +5,7 @@ import models.automotive;
 
 // Specific checklist of a given type, such as a pre-delivery inspection or a checklist used for a specific type of service.
 class DATMDeviceInspectionChecklist : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceInspectionChecklist"));
+  mixin(EntityThis!("ATMDeviceInspectionChecklist"));
   
   override void initialize() {
     super.initialize;
@@ -34,7 +34,7 @@ class DATMDeviceInspectionChecklist : DOOPEntity {
       .registerPath("automotive_deviceinspectionchecklists");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceInspectionChecklist"));
+mixin(EntityCalls!("ATMDeviceInspectionChecklist"));
 
 unittest {
   version(uim_entities) {

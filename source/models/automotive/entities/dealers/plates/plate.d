@@ -5,7 +5,7 @@ import models.automotive;
 
 // License plate applied temporarily to vehicles to provide services such as test drives.
 class DATMDealerPlate : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDealerPlate"));
+  mixin(EntityThis!("ATMDealerPlate"));
   
   override void initialize() {
     super.initialize;
@@ -38,7 +38,7 @@ class DATMDealerPlate : DOOPEntity {
       .registerPath("automotive_dealerplates");
   }
 }
-mixin(OOPEntityCalls!("ATMDealerPlate"));
+mixin(EntityCalls!("ATMDealerPlate"));
 
 unittest {
   version(uim_entities) {

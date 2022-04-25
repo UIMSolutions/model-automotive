@@ -5,7 +5,7 @@ import models.automotive;
 
 // Terms applicable a given type of deal.
 class DATMDealTerm : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDealTerm"));
+  mixin(EntityThis!("ATMDealTerm"));
   
   override void initialize() {
     super.initialize;
@@ -33,7 +33,7 @@ class DATMDealTerm : DOOPEntity {
       .registerPath("automotive_dealterms");
   }
 }
-mixin(OOPEntityCalls!("ATMDealTerm"));
+mixin(EntityCalls!("ATMDealTerm"));
 
 unittest {
   version(uim_entities) {

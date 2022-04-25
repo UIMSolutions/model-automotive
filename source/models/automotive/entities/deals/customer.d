@@ -5,7 +5,7 @@ import models.automotive;
 
 // Customer associated with a given deal.
 class DATMDealCustomer : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDealCustomer"));
+  mixin(EntityThis!("ATMDealCustomer"));
   
   override void initialize() {
     super.initialize;
@@ -38,7 +38,7 @@ class DATMDealCustomer : DOOPEntity {
       .registerPath("automotive_dealcustomers");
   }
 }
-mixin(OOPEntityCalls!("ATMDealCustomer"));
+mixin(EntityCalls!("ATMDealCustomer"));
 
 unittest {
   version(uim_entities) {

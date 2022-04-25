@@ -5,7 +5,7 @@ import models.automotive;
 
 // Relationship indicating that a specific warranty applies to a specific vehicle or device.
 class DATMDeviceWarranty : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceWarranty"));
+  mixin(EntityThis!("ATMDeviceWarranty"));
   
   override void initialize() {
     super.initialize;
@@ -37,7 +37,7 @@ class DATMDeviceWarranty : DOOPEntity {
       .registerPath("automotive_devicewarranties");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceWarranty"));
+mixin(EntityCalls!("ATMDeviceWarranty"));
 
 unittest {
   version(uim_entities) {

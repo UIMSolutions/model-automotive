@@ -5,7 +5,7 @@ import models.automotive;
 
 // Describes state of a vehicle or device, such as New, Used or Scrapped.
 class DATMDeviceState : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceState"));
+  mixin(EntityThis!("ATMDeviceState"));
   
   override void initialize() {
     super.initialize;
@@ -40,7 +40,7 @@ class DATMDeviceState : DOOPEntity {
       .registerPath("automotive_devicestates");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceState"));
+mixin(EntityCalls!("ATMDeviceState"));
 
 unittest {
   version(uim_entities) {

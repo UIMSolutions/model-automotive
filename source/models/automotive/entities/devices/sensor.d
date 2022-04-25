@@ -5,7 +5,7 @@ import models.automotive;
 
 // Sensor attached to or as part of a vehicle or device. May provide signals of device health or usage.
 class DATMDeviceSensor : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceSensor"));
+  mixin(EntityThis!("ATMDeviceSensor"));
   
   override void initialize() {
     super.initialize;
@@ -35,7 +35,7 @@ class DATMDeviceSensor : DOOPEntity {
       .registerPath("automotive_devicesensors");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceSensor")); 
+mixin(EntityCalls!("ATMDeviceSensor")); 
 
 unittest {
   version(uim_entities) {

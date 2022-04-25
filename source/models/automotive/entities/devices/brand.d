@@ -5,7 +5,7 @@ import models.automotive;
 
 // Brand name of a vehicle or device manufacturer, main vendor for a group of devices or manufacturer or main vendor for supplier items.
 class DATMDeviceBrand : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceBrand"));
+  mixin(EntityThis!("ATMDeviceBrand"));
   
   override void initialize() {
     super.initialize;
@@ -34,7 +34,7 @@ class DATMDeviceBrand : DOOPEntity {
       .registerPath("automotive_devicebrands");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceBrand"));
+mixin(EntityCalls!("ATMDeviceBrand"));
 
 unittest {
   version(uim_entities) {

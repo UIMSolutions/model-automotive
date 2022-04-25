@@ -5,7 +5,7 @@ import models.automotive;
 
 // Sub-type of a device class, which may be identified by specific engine option, body styles and other common characteristics. Breaks down further into device model codes.
 class DATMDeviceModel : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceModel"));
+  mixin(EntityThis!("ATMDeviceModel"));
   
   override void initialize() {
     super.initialize;
@@ -39,7 +39,7 @@ class DATMDeviceModel : DOOPEntity {
       .registerPath("automotive_devicemodels");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceModel"));
+mixin(EntityCalls!("ATMDeviceModel"));
 
 unittest {
   version(uim_entities) {

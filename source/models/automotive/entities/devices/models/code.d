@@ -5,7 +5,7 @@ import models.automotive;
 
 // Specific configuration of a device, such as a vehicle of specific generation, body style, engine option and transmission.
 class DATMDeviceModelCode : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceModelCode"));
+  mixin(EntityThis!("ATMDeviceModelCode"));
   
   override void initialize() {
     super.initialize;
@@ -41,7 +41,7 @@ class DATMDeviceModelCode : DOOPEntity {
       .registerPath("automotive_devicemodelcodes");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceModelCode"));
+mixin(EntityCalls!("ATMDeviceModelCode"));
 
 unittest {
   version(uim_entities) {

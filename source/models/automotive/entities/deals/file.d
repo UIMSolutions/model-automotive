@@ -5,7 +5,7 @@ import models.automotive;
 
 // Container for deals relating to a given opportunity.
 class DATMDealFile : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDealFile"));
+  mixin(EntityThis!("ATMDealFile"));
   
   override void initialize() {
     super.initialize;
@@ -33,7 +33,7 @@ class DATMDealFile : DOOPEntity {
       .registerPath("automotive_dealfiles");
   }
 }
-mixin(OOPEntityCalls!("ATMDealFile"));
+mixin(EntityCalls!("ATMDealFile"));
 
 unittest {
   version(uim_entities) {

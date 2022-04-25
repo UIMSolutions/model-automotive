@@ -5,7 +5,7 @@ import models.automotive;
 
 // Record of inspections carried out on a given vehicle or device over time.
 class DATMDeviceInspection : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceInspection"));
+  mixin(EntityThis!("ATMDeviceInspection"));
   
   override void initialize() {
     super.initialize;
@@ -38,7 +38,7 @@ class DATMDeviceInspection : DOOPEntity {
       .registerPath("automotive_deviceinspections");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceInspection"));
+mixin(EntityCalls!("ATMDeviceInspection"));
 
 unittest {
   version(uim_entities) {

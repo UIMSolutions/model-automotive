@@ -5,7 +5,7 @@ import models.automotive;
 
 // Type of deal, such as new car sales, used car sales, heavy equipment sales, and so on.
 class DATMDealType : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDealType"));
+  mixin(EntityThis!("ATMDealType"));
   
   override void initialize() {
     super.initialize;
@@ -32,7 +32,7 @@ class DATMDealType : DOOPEntity {
       .registerPath("automotive_dealtypes");
   }
 }
-mixin(OOPEntityCalls!("ATMDealType"));
+mixin(EntityCalls!("ATMDealType"));
 
 unittest {
   version(uim_entities) {

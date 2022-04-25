@@ -5,7 +5,7 @@ import models.automotive;
 
 // Record of license plates assigned to a given vehicle or device over time.
 class DATMDeviceLicensePlate : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeviceLicensePlate"));
+  mixin(EntityThis!("ATMDeviceLicensePlate"));
   
   override void initialize() {
     super.initialize;
@@ -38,7 +38,7 @@ class DATMDeviceLicensePlate : DOOPEntity {
       .registerPath("automotive_devicelicenseplates");
   }
 }
-mixin(OOPEntityCalls!("ATMDeviceLicensePlate"));
+mixin(EntityCalls!("ATMDeviceLicensePlate"));
 
 unittest {
   version(uim_entities) {

@@ -5,7 +5,7 @@ import models.automotive;
 
 // Business proposal for the sale of one or more vehicle or device, including optional trade-ins, add-ons and financial terms.
 class DATMDeal : DOOPEntity {
-  mixin(OOPEntityThis!("ATMDeal"));
+  mixin(EntityThis!("ATMDeal"));
   
   override void initialize() {
     super.initialize;
@@ -49,7 +49,7 @@ class DATMDeal : DOOPEntity {
       .registerPath("automotive_deals");
   }
 }
-mixin(OOPEntityCalls!("ATMDeal"));
+mixin(EntityCalls!("ATMDeal"));
 
 unittest {
   version(uim_entities) {
