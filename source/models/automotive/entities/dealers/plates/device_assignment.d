@@ -17,23 +17,25 @@ class DATMDealerPlateDeviceAssignment : DOOPEntity {
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
         "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
-        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
         "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
         "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
         "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
-        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
         "businessOperationId": OOPUUIDAttribute.descriptions(["en":"Department/team at dealership responsible for dealer plate."]),
-        "comments": OOPStringAttribute.descriptions(["en":"Note or remarks about the dealer plate."]),
         "dealerPlateId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
         "deviceId": OOPUUIDAttribute.descriptions(["en":"The vehicle for this dealer plate assignment."]),
         "testDriveId": OOPUUIDAttribute.descriptions(["en":"Test drive of the vehicle."]),
-        "validFrom": OOPStringAttribute.descriptions(["en":"First date for which the dealer plate assignment is valid."]),
-        "validTo": OOPStringAttribute.descriptions(["en":"Last date for which the dealer plate assignment is valid."]),
-        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Dealer Plate Device Assignment 	automotive/"]),
-        "stateCode_display": OOPStringAttribute.descriptions(["en":"automotive/"]),
-        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Dealer Plate Device Assignment 	automotive/"]),
-        "statusCode_display": OOPStringAttribute.descriptions(["en":"automotive/"]),
+      ])
+      .addValues([
+        StateCodeAttributeClass,
+        StatusCodeAttributeClass
+      ])
+      .addValues([
+        "comments": StringAttributeClass, //Note or remarks about the dealer plate.
+        "ownerIdType": StringAttributeClass, //The type of owner, either User or Team.
+        "utcConversionTimeZoneCode": StringAttributeClass, //Time zone code that was in use when the record was created.
+        "validFrom": StringAttributeClass, //First date for which the dealer plate assignment is valid.
+        "validTo": StringAttributeClass, //Last date for which the dealer plate assignment is valid.
       ])
       .registerPath("automotive_dealerplatedeviceassignments");
   }
