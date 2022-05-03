@@ -34,8 +34,9 @@ class DATMDeviceInspectionChecklistType: DOOPEntity {
 }
 mixin(EntityCalls!("ATMDeviceInspectionChecklistType"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ATMDeviceInspectionChecklistType);
   
   auto entity = ATMDeviceInspectionChecklistType;

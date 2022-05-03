@@ -36,8 +36,9 @@ class DATMDeviceBrand : DOOPEntity {
 }
 mixin(EntityCalls!("ATMDeviceBrand"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ATMDeviceBrand);
   
   auto entity = ATMDeviceBrand;

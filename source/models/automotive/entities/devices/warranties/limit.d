@@ -39,8 +39,9 @@ class DATMDeviceWarrantyLimit : DOOPEntity {
 }
 mixin(EntityCalls!("ATMDeviceWarrantyLimit"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ATMDeviceWarrantyLimit);
   
   auto entity = ATMDeviceWarrantyLimit;

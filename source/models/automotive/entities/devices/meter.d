@@ -41,8 +41,9 @@ class DATMMeter : DOOPEntity {
 }
 mixin(EntityCalls!("ATMMeter"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ATMMeter);
   
   auto entity = ATMMeter;

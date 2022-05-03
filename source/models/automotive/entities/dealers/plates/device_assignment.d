@@ -42,8 +42,9 @@ class DATMDealerPlateDeviceAssignment : DOOPEntity {
 }
 mixin(EntityCalls!("ATMDealerPlateDeviceAssignment"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(ATMDealerPlateDeviceAssignment);
 
   auto entity = ATMDealerPlateDeviceAssignment;
