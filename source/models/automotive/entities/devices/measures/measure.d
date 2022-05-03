@@ -16,20 +16,20 @@ class DATMDeviceMeasure : DOOPEntity {
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
-        "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
-        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
+        "ownerId": UUIDAttributeClass, // Owner Id"]),
+        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
         "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
         "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
         "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
-        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
-        "deviceMeasureId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
-        "displayNumberOfDecimals": OOPStringAttribute.descriptions(["en":"The number for decimals to display for the measurement value."]),
-        "unitId": OOPUUIDAttribute.descriptions(["en":"Unit used for the measurement."]),
-        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Device Measure"]),
-        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
-        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Device Measurec"]),
-        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
+        "deviceMeasureId": UUIDAttributeClass, // Unique identifier for entity instances"]),
+        "displayNumberOfDecimals": StringAttributeClass, // The number for decimals to display for the measurement value."]),
+        "unitId": UUIDAttributeClass, // Unit used for the measurement."]),
+        "stateCode": StringAttributeClass, // Status of the Device Measure"]),
+        "stateCode_display": StringAttributeClass, //
+        "statusCode": StringAttributeClass, // Reason for the status of the Device Measurec"]),
+        "statusCode_display": StringAttributeClass, //
       ])
       .registerPath("automotive_devicemeasures");
   }

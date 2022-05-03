@@ -16,20 +16,20 @@ class DATMDeviceInspectionChecklist : DOOPEntity {
           "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
           "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
           "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record."]),
-          "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
-          "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
+          "ownerId": UUIDAttributeClass, // Owner Id"]),
+          "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
           "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
           "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
           "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
           "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
-          "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
-          "deviceId": OOPUUIDAttribute.descriptions(["en":"Vehicle or device being inspected."]),
-          "deviceInspectionChecklistId": OOPUUIDAttribute.descriptions(["en":"Inspection checklist used for the inspection."]),
-          "deviceInspectionChecklistTypeId": OOPUUIDAttribute.descriptions(["en":"Type of inspection checklist."]),
-          "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Device Inspection Checklist"]),
-          "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
-          "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Device Inspection Checklist"]),
-          "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+          "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
+          "deviceId": UUIDAttributeClass, // Vehicle or device being inspected."]),
+          "deviceInspectionChecklistId": UUIDAttributeClass, // Inspection checklist used for the inspection."]),
+          "deviceInspectionChecklistTypeId": UUIDAttributeClass, // Type of inspection checklist."]),
+          "stateCode": StringAttributeClass, // Status of the Device Inspection Checklist"]),
+          "stateCode_display": StringAttributeClass, //
+          "statusCode": StringAttributeClass, // Reason for the status of the Device Inspection Checklist"]),
+          "statusCode_display": StringAttributeClass, //
        ])
       .registerPath("automotive_deviceinspectionchecklists");
   }
