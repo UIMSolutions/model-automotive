@@ -1,16 +1,25 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+
+# DUB
 .dub
 docs.json
 __dummy.html
 docs/
-/model-automotive
-model-automotive.so
-model-automotive.dylib
-model-automotive.dll
-model-automotive.a
-model-automotive.lib
-model-automotive-test-*
-*.exe
-*.o
-*.obj
+
+# Code coverage
 *.lst
 dub.selections.json
