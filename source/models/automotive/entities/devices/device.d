@@ -45,7 +45,7 @@ class DATMDevice : DOOPEntity {
         "listPriceComments": StringAttributeClass, // Comments regarding the listed price for this vehicle or device."]),
         "registrationNumber": IntegerAttributeClass, //Registration number for this vehicle or device."]),
         "specificationId": UUIDAttributeClass, // Specification tied to this vehicle or device."]),
-        "Url": OOPUrlAttribute.descriptions(["en":"Webpage for vehicle or device."]),
+        "Url": UrlAttributeClass, // Webpage for vehicle or device."]),
         "vendorsStockNumber": IntegerAttributeClass, //Stock number for vehicle or device."]),
         "VIN": StringAttributeClass, // Unique code used to identify an vehicle or device."]),
         "year": StringAttributeClass, // Manufacture year of the vehicle or device."]),
@@ -53,7 +53,7 @@ class DATMDevice : DOOPEntity {
         "stateCode_display": StringAttributeClass, //
         "statusCode": StringAttributeClass, // Reason for the status of the Device"]),
         "statusCode_display": StringAttributeClass, //
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Unique identifier of the currency associated with the entity."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Unique identifier of the currency associated with the entity."]),
       ])
       .registerPath("automotive_devices");
   }

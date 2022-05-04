@@ -43,7 +43,7 @@ class DATMDealDevice : DOOPEntity {
         "stateCode_display": StringAttributeClass, //
         "statusCode": StringAttributeClass, // Reason for the status of the Deal Device"]),
         "statusCode_display": StringAttributeClass, //
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Unique identifier of the currency associated with the entity."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Unique identifier of the currency associated with the entity."]),
       ])
       .registerPath("automotive_dealdevices");
   }
