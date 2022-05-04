@@ -12,16 +12,16 @@ class DATMDeviceType : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
-        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated. "]),
-        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record. "]),
+        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who modified the record."]),
+        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated. "]),
+        "importSequenceNumber": IntegerAttributeClass, //Unique identifier of the data import or data migration that created this record. "]),
         "ownerId": UUIDAttributeClass, // Owner Id "]),
         "ownerIdType": StringAttributeClass, // The type of owner, either User or Team. "]),
-        "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record "]),
-        "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity. "]),
-        "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record. "]),
-        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only. "]),
+        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record "]),
+        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity. "]),
+        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record. "]),
+        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only. "]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created. "]),
         "entityImage": StringAttributeClass, //
         "code": StringAttributeClass, // Unique code for the device type. "]),

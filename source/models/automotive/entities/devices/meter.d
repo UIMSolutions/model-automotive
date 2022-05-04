@@ -12,16 +12,16 @@ class DATMMeter : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the territory."]),
-        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the territory."]),
-        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated. "]),
-        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Unique identifier of the data import or data migration that created this record. "]),
+        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the territory."]),
+        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who last modified the territory."]),
+        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated. "]),
+        "importSequenceNumber": IntegerAttributeClass, //Unique identifier of the data import or data migration that created this record. "]),
         "ownerId": UUIDAttributeClass, // Owner Id "]),
         "ownerIdType": StringAttributeClass, // The type of owner, either User or Team. "]),
-        "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record "]),
-        "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity. "]),
-        "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record. "]),
-        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only. "]),
+        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record "]),
+        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity. "]),
+        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record. "]),
+        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only. "]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created. "]),
         "deviceId": UUIDAttributeClass, // Parent device for this device meter. "]),
         "deviceMeasureId": UUIDAttributeClass, // Type of measurement for this device meter. "]),
@@ -30,7 +30,7 @@ class DATMMeter : DOOPEntity {
         "expectedMinimum": StringAttributeClass, // The anticipated minimum amount. "]),
         "isPrimary": StringAttributeClass, // Is this the primary device? "]),
         "offset": StringAttributeClass, // Any variation from the original settings. "]),
-        "serialNumber": OOPIntegerAttribute.descriptions(["en":"Unique number of the device meter. "]),
+        "serialNumber": IntegerAttributeClass, //Unique number of the device meter. "]),
         "stateCode": StringAttributeClass, // Status of the Device Meter "]),
         "stateCode_display": StringAttributeClass, //
         "statusCode": StringAttributeClass, // Reason for the status of the Device Meter "]),
