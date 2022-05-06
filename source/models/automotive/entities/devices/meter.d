@@ -12,29 +12,29 @@ class DATMMeter : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the territory."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who last modified the territory."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated. "]),
-        "importSequenceNumber": IntegerAttributeClass, //Unique identifier of the data import or data migration that created this record. "]),
-        "ownerId": UUIDAttributeClass, // Owner Id "]),
-        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team. "]),
-        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record "]),
-        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity. "]),
-        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record. "]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only. "]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created. "]),
-        "deviceId": UUIDAttributeClass, // Parent device for this device meter. "]),
-        "deviceMeasureId": UUIDAttributeClass, // Type of measurement for this device meter. "]),
-        "deviceMeterId": UUIDAttributeClass, // Unique identifier for entity instances "]),
-        "expectedMaximum": StringAttributeClass, // The anticipated maximum amount. "]),
-        "expectedMinimum": StringAttributeClass, // The anticipated minimum amount. "]),
-        "isPrimary": StringAttributeClass, // Is this the primary device? "]),
-        "offset": StringAttributeClass, // Any variation from the original settings. "]),
-        "serialNumber": IntegerAttributeClass, //Unique number of the device meter. "]),
-        "stateCode": StringAttributeClass, // Status of the Device Meter "]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Device Meter "]),
-        "statusCode_display": StringAttributeClass, //
+        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the territory."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who last modified the territory."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated. "]),
+        "importSequenceNumber": IntegerAttribute, //Unique identifier of the data import or data migration that created this record. "]),
+        "ownerId": UUIDAttribute, // Owner Id "]),
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team. "]),
+        "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record "]),
+        "owningUserId": UUIDAttribute, //Unique identifier of the user that owns the activity. "]),
+        "owningTeamId": UUIDAttribute, //Unique identifier for the team that owns the record. "]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only. "]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created. "]),
+        "deviceId": UUIDAttribute, // Parent device for this device meter. "]),
+        "deviceMeasureId": UUIDAttribute, // Type of measurement for this device meter. "]),
+        "deviceMeterId": UUIDAttribute, // Unique identifier for entity instances "]),
+        "expectedMaximum": StringAttribute, // The anticipated maximum amount. "]),
+        "expectedMinimum": StringAttribute, // The anticipated minimum amount. "]),
+        "isPrimary": StringAttribute, // Is this the primary device? "]),
+        "offset": StringAttribute, // Any variation from the original settings. "]),
+        "serialNumber": IntegerAttribute, //Unique number of the device meter. "]),
+        "stateCode": StringAttribute, // Status of the Device Meter "]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Device Meter "]),
+        "statusCode_display": StringAttribute, //
       ])
       .registerPath("automotive_meters");
   }

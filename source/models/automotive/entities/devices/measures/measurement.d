@@ -12,30 +12,30 @@ class DATMDeviceMeasurement : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the territory."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who last modified the territory."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated. "]),
-        "importSequenceNumber": IntegerAttributeClass, //Unique identifier of the data import or data migration that created this record. "]),
-        "ownerId": UUIDAttributeClass, // Owner Id "]),
-        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team. "]),
-        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record "]),
-        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity. "]),
-        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record. "]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only. "]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created. "]),
-        "deviceId": UUIDAttributeClass, // Device for this device measurement. "]),
-        "deviceMeasureId": UUIDAttributeClass, // Type of measurement for this meter. "]),
-        "deviceMeasurementId": UUIDAttributeClass, // Unique identifier for entity instances "]),
-        "deviceMeterId": UUIDAttributeClass, // Meter from which this usage measurement was taken. "]),
-        "measuredById": UUIDAttributeClass, // Person who recorded the measurement. "]),
-        "measuredOn": TimestampAttributeClass, //Date that the measurement was recorded. "]),
-        "measuredValue": StringAttributeClass, // Value of the measurement. "]),
-        "serviceOrderId": UUIDAttributeClass, // Parent service order for when this measurement was taken. "]),
-        "value": StringAttributeClass, // Value of the measurement. "]),
-        "stateCode": StringAttributeClass, // Status of the Device Measurement "]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Device Measurement "]),
-        "statusCode_display": StringAttributeClass, //
+        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the territory."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who last modified the territory."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated. "]),
+        "importSequenceNumber": IntegerAttribute, //Unique identifier of the data import or data migration that created this record. "]),
+        "ownerId": UUIDAttribute, // Owner Id "]),
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team. "]),
+        "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record "]),
+        "owningUserId": UUIDAttribute, //Unique identifier of the user that owns the activity. "]),
+        "owningTeamId": UUIDAttribute, //Unique identifier for the team that owns the record. "]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only. "]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created. "]),
+        "deviceId": UUIDAttribute, // Device for this device measurement. "]),
+        "deviceMeasureId": UUIDAttribute, // Type of measurement for this meter. "]),
+        "deviceMeasurementId": UUIDAttribute, // Unique identifier for entity instances "]),
+        "deviceMeterId": UUIDAttribute, // Meter from which this usage measurement was taken. "]),
+        "measuredById": UUIDAttribute, // Person who recorded the measurement. "]),
+        "measuredOn": TimestampAttribute, //Date that the measurement was recorded. "]),
+        "measuredValue": StringAttribute, // Value of the measurement. "]),
+        "serviceOrderId": UUIDAttribute, // Parent service order for when this measurement was taken. "]),
+        "value": StringAttribute, // Value of the measurement. "]),
+        "stateCode": StringAttribute, // Status of the Device Measurement "]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Device Measurement "]),
+        "statusCode_display": StringAttribute, //
       ])
       .registerPath("automotive_devicemeasurements");
   }

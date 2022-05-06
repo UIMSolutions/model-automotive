@@ -12,31 +12,31 @@ class DATMDeviceModelCode : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the territory."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who last modified the territory."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated. "]),
-        "importSequenceNumber": IntegerAttributeClass, //Unique identifier of the data import or data migration that created this record. "]),
-        "ownerId": UUIDAttributeClass, // Owner Id "]),
-        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team. "]),
-        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record "]),
-        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity. "]),
-        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record. "]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only. "]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created. "]),
-        "entityImage": StringAttributeClass, //
-        "code": StringAttributeClass, // Unique code for this device model. "]),
-        "deviceBrandId": UUIDAttributeClass, // Brand of the model code. "]),
-        "deviceClassId": UUIDAttributeClass, // Class of the model code. "]),
-        "deviceGenerationId": UUIDAttributeClass, // Generation of the model code. "]),
-        "deviceModelCodeId": UUIDAttributeClass, // Unique identifier for entity instances "]),
-        "deviceModelId": UUIDAttributeClass, // Model of the model code. "]),
-        "deviceStyleId": UUIDAttributeClass, // Body style of the model code. "]),
-        "deviceTypeId": UUIDAttributeClass, // Type of device for this model. "]),
-        "specificationId": UUIDAttributeClass, // Specification of this model code. "]),
-        "stateCode": StringAttributeClass, // Status of the Device Model Code "]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Device Model Code "]),
-        "statusCode_display": StringAttributeClass, //
+        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the territory."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who last modified the territory."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated. "]),
+        "importSequenceNumber": IntegerAttribute, //Unique identifier of the data import or data migration that created this record. "]),
+        "ownerId": UUIDAttribute, // Owner Id "]),
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team. "]),
+        "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record "]),
+        "owningUserId": UUIDAttribute, //Unique identifier of the user that owns the activity. "]),
+        "owningTeamId": UUIDAttribute, //Unique identifier for the team that owns the record. "]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only. "]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created. "]),
+        "entityImage": StringAttribute, //
+        "code": StringAttribute, // Unique code for this device model. "]),
+        "deviceBrandId": UUIDAttribute, // Brand of the model code. "]),
+        "deviceClassId": UUIDAttribute, // Class of the model code. "]),
+        "deviceGenerationId": UUIDAttribute, // Generation of the model code. "]),
+        "deviceModelCodeId": UUIDAttribute, // Unique identifier for entity instances "]),
+        "deviceModelId": UUIDAttribute, // Model of the model code. "]),
+        "deviceStyleId": UUIDAttribute, // Body style of the model code. "]),
+        "deviceTypeId": UUIDAttribute, // Type of device for this model. "]),
+        "specificationId": UUIDAttribute, // Specification of this model code. "]),
+        "stateCode": StringAttribute, // Status of the Device Model Code "]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Device Model Code "]),
+        "statusCode_display": StringAttribute, //
       ])
       .registerPath("automotive_devicemodelcodes");
   }

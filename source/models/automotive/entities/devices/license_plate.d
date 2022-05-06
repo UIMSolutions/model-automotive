@@ -12,28 +12,28 @@ class DATMDeviceLicensePlate : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the territory."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who last modified the territory."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
-        "importSequenceNumber": IntegerAttributeClass, //Unique identifier of the data import or data migration that created this record."]),
-        "ownerId": UUIDAttributeClass, // Owner Id"]),
-        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
-        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record"]),
-        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity."]),
-        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "comments": StringAttributeClass, // Notes or remarks about the license plate."]),
-        "deviceId": UUIDAttributeClass, // Vehicle for which the license plate is registered."]),
-        "deviceLicensePlateId": UUIDAttributeClass, // Unique identifier for entity instances"]),
-        "issuedBy": UUIDAttributeClass, //Issuer of the license plate."]),
-        "registrationNumber": IntegerAttributeClass, //Name of the vehicle license plate."]),
-        "validFrom": StringAttributeClass, // First day for which the license plate is valid."]),
-        "validTo": StringAttributeClass, // Last day for which the license plate is valid."]),
-        "stateCode": StringAttributeClass, // Status of the Device License Plate"]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Device License Plate"]),
-        "statusCode_display": StringAttributeClass, //
+        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the territory."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who last modified the territory."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
+        "importSequenceNumber": IntegerAttribute, //Unique identifier of the data import or data migration that created this record."]),
+        "ownerId": UUIDAttribute, // Owner Id"]),
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
+        "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
+        "owningUserId": UUIDAttribute, //Unique identifier of the user that owns the activity."]),
+        "owningTeamId": UUIDAttribute, //Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "comments": StringAttribute, // Notes or remarks about the license plate."]),
+        "deviceId": UUIDAttribute, // Vehicle for which the license plate is registered."]),
+        "deviceLicensePlateId": UUIDAttribute, // Unique identifier for entity instances"]),
+        "issuedBy": UUIDAttribute, //Issuer of the license plate."]),
+        "registrationNumber": IntegerAttribute, //Name of the vehicle license plate."]),
+        "validFrom": StringAttribute, // First day for which the license plate is valid."]),
+        "validTo": StringAttribute, // Last day for which the license plate is valid."]),
+        "stateCode": StringAttribute, // Status of the Device License Plate"]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Device License Plate"]),
+        "statusCode_display": StringAttribute, //
       ])
       .registerPath("automotive_devicelicenseplates");
   }

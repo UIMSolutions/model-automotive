@@ -12,30 +12,30 @@ class DATMDeviceState : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who modified the record."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated. "]),
-        "importSequenceNumber": IntegerAttributeClass, //Unique identifier of the data import or data migration that created this record. "]),
-        "ownerId": UUIDAttributeClass, // Owner Id "]),
-        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team. "]),
-        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record "]),
-        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity. "]),
-        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record. "]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only. "]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created. "]),
-        "deviceStateId": UUIDAttributeClass, // Unique identifier for entity instances "]),
-        "inventoryStatus": StringAttributeClass, // Inventory status of the device (available, not available, fleet, on loan, etc.). "]),
-        "inventoryStatus_display": StringAttributeClass, //
-        "ownershipStatus": StringAttributeClass, // Is the vehicle or device titled or untitled? "]),
-        "ownershipStatus_display": StringAttributeClass, //
-        "ownershipType": StringAttributeClass, // Ownership category (financing provider, customer or dealer)? "]),
-        "ownershipType_display": StringAttributeClass, //
-        "tradeStatus": StringAttributeClass, // Indicates whether the vehicle or device is new, certified used or used. "]),
-        "tradeStatus_display": StringAttributeClass, //
-        "stateCode": StringAttributeClass, // Status of the Device State "]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Device State "]),
-        "statusCode_display": StringAttributeClass, //
+        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who modified the record."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated. "]),
+        "importSequenceNumber": IntegerAttribute, //Unique identifier of the data import or data migration that created this record. "]),
+        "ownerId": UUIDAttribute, // Owner Id "]),
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team. "]),
+        "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record "]),
+        "owningUserId": UUIDAttribute, //Unique identifier of the user that owns the activity. "]),
+        "owningTeamId": UUIDAttribute, //Unique identifier for the team that owns the record. "]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only. "]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created. "]),
+        "deviceStateId": UUIDAttribute, // Unique identifier for entity instances "]),
+        "inventoryStatus": StringAttribute, // Inventory status of the device (available, not available, fleet, on loan, etc.). "]),
+        "inventoryStatus_display": StringAttribute, //
+        "ownershipStatus": StringAttribute, // Is the vehicle or device titled or untitled? "]),
+        "ownershipStatus_display": StringAttribute, //
+        "ownershipType": StringAttribute, // Ownership category (financing provider, customer or dealer)? "]),
+        "ownershipType_display": StringAttribute, //
+        "tradeStatus": StringAttribute, // Indicates whether the vehicle or device is new, certified used or used. "]),
+        "tradeStatus_display": StringAttribute, //
+        "stateCode": StringAttribute, // Status of the Device State "]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Device State "]),
+        "statusCode_display": StringAttribute, //
       ])
       .registerPath("automotive_devicestates");
   }

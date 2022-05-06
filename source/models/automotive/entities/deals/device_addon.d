@@ -12,32 +12,32 @@ class DATMDealDeviceAddOn : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who modified the record."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
-        "importSequenceNumber": IntegerAttributeClass, //Unique identifier of the data import or data migration that created this record."]),
-        "ownerId": UUIDAttributeClass, // Owner Id"]),
-        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
-        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record"]),
-        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity."]),
-        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "exchangeRate": StringAttributeClass, // Exchange rate for the currency associated with the entity with respect to the base currency."]),
-        "actualCost": StringAttributeClass, // Cost of the add-on added to the deal."]),
-        "actualCostBase": StringAttributeClass, // Value of the actual cost in base currency."]),
-        "customerPrice": StringAttributeClass, // Price the customer was charged for the add-on."]),
-        "customerPriceBase": StringAttributeClass, // Value of the customer price in base currency."]),
-        "dealDeviceAddOnId": UUIDAttributeClass, // Unique identifier for entity instances"]),
-        "dealDeviceId": UUIDAttributeClass, // Parent deal for which the add-on is being added."]),
-        "itemNumber": IntegerAttributeClass, //Unique number of the add-on."]),
-        "retailPrice": StringAttributeClass, // Retail price of the add-on."]),
-        "retailPriceBase": StringAttributeClass, // Value of the Retail Price in base currency."]),
-        "stateCode": StringAttributeClass, // Status of the Deal Device Add On"]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Deal Device Add On"]),
-        "statusCode_display": StringAttributeClass, //
-        "transactionCurrencyId": CurrencyIdAttributeClass, // Unique identifier of the currency associated with the entity."]),
+        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who modified the record."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
+        "importSequenceNumber": IntegerAttribute, //Unique identifier of the data import or data migration that created this record."]),
+        "ownerId": UUIDAttribute, // Owner Id"]),
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
+        "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
+        "owningUserId": UUIDAttribute, //Unique identifier of the user that owns the activity."]),
+        "owningTeamId": UUIDAttribute, //Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the entity with respect to the base currency."]),
+        "actualCost": StringAttribute, // Cost of the add-on added to the deal."]),
+        "actualCostBase": StringAttribute, // Value of the actual cost in base currency."]),
+        "customerPrice": StringAttribute, // Price the customer was charged for the add-on."]),
+        "customerPriceBase": StringAttribute, // Value of the customer price in base currency."]),
+        "dealDeviceAddOnId": UUIDAttribute, // Unique identifier for entity instances"]),
+        "dealDeviceId": UUIDAttribute, // Parent deal for which the add-on is being added."]),
+        "itemNumber": IntegerAttribute, //Unique number of the add-on."]),
+        "retailPrice": StringAttribute, // Retail price of the add-on."]),
+        "retailPriceBase": StringAttribute, // Value of the Retail Price in base currency."]),
+        "stateCode": StringAttribute, // Status of the Deal Device Add On"]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Deal Device Add On"]),
+        "statusCode_display": StringAttribute, //
+        "transactionCurrencyId": CurrencyIdAttribute, // Unique identifier of the currency associated with the entity."]),
       ])
       .registerPath("automotive_dealdeviceaddons");
   }
