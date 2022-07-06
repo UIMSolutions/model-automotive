@@ -4,19 +4,23 @@ module models.automotive.entities.devices.device;
 import models.automotive;
 
 // Physical piece of equipment of considerable value such as a vehicle or a device such as an excavator, that can be tracked through its entire life cycle of trade, ownership and service and may be related to one or more customers over time.
-class DATMDevice : DOOPEntity {
-  mixin(EntityThis!("ATMDevice"));
+class DDeviceEntity : DOOPEntity {
+  mixin(EntityThis!("DeviceEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
-      .addValues([
-        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the territory."]),
-        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who last modified the territory."]),
+      .addValues([ // fix values
+        CreatedOnBehalfByAttribute, 
+        ModifiedOnBehalfByAttribute, 
+        OwnerIdAttribute, 
+        StateCodeAttribute, 
+        StatusCodeAttribute 
+      ])
+      .addValues([ // individual values
         "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
         "importSequenceNumber": IntegerAttribute, //Unique identifier of the data import or data migration that created this record."]),
-        "ownerId": UUIDAttribute, // Owner Id"]),
         "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
         "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
         "owningUserId": UUIDAttribute, //Unique identifier of the user that owns the activity."]),
@@ -49,29 +53,17 @@ class DATMDevice : DOOPEntity {
         "vendorsStockNumber": IntegerAttribute, //Stock number for vehicle or device."]),
         "VIN": StringAttribute, // Unique code used to identify an vehicle or device."]),
         "year": StringAttribute, // Manufacture year of the vehicle or device."]),
-        "stateCode": StringAttribute, // Status of the Device"]),
-        "stateCode_display": StringAttribute, //
-        "statusCode": StringAttribute, // Reason for the status of the Device"]),
-        "statusCode_display": StringAttribute, //
         "transactionCurrencyId": CurrencyIdAttribute, // Unique identifier of the currency associated with the entity."]),
       ])
       .registerPath("automotive_devices");
   }
 }
-mixin(EntityCalls!("ATMDevice"));
+mixin(EntityCalls!("DeviceEntity"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(ATMDevice);
+    assert(DeviceEntity);
   
-  auto entity = ATMDevice;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+    auto entity = DeviceEntity;
   }
 }

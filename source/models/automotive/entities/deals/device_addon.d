@@ -4,19 +4,23 @@ module models.automotive.entities.deals.device_addon;
 import models.automotive;
 
 // Additional product or service offered with a given vehicle or device in a deal.
-class DATMDealDeviceAddOn : DOOPEntity {
-  mixin(EntityThis!("ATMDealDeviceAddOn"));
+class DDealDeviceAddOnEntity : DOOPEntity {
+  mixin(EntityThis!("DealDeviceAddOnEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
-      .addValues([
-        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who modified the record."]),
+      .addValues([ // fix values
+        CreatedOnBehalfByAttribute, 
+        ModifiedOnBehalfByAttribute, 
+        OwnerIdAttribute, 
+        StateCodeAttribute, 
+        StatusCodeAttribute 
+      ])
+      .addValues([ // individual values
         "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
         "importSequenceNumber": IntegerAttribute, //Unique identifier of the data import or data migration that created this record."]),
-        "ownerId": UUIDAttribute, // Owner Id"]),
         "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
         "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
         "owningUserId": UUIDAttribute, //Unique identifier of the user that owns the activity."]),
@@ -33,29 +37,17 @@ class DATMDealDeviceAddOn : DOOPEntity {
         "itemNumber": IntegerAttribute, //Unique number of the add-on."]),
         "retailPrice": StringAttribute, // Retail price of the add-on."]),
         "retailPriceBase": StringAttribute, // Value of the Retail Price in base currency."]),
-        "stateCode": StringAttribute, // Status of the Deal Device Add On"]),
-        "stateCode_display": StringAttribute, //
-        "statusCode": StringAttribute, // Reason for the status of the Deal Device Add On"]),
-        "statusCode_display": StringAttribute, //
         "transactionCurrencyId": CurrencyIdAttribute, // Unique identifier of the currency associated with the entity."]),
       ])
-      .registerPath("automotive_dealdeviceaddons");
+      .registerPath("automotive_deals.device_addons");
   }
 }
-mixin(EntityCalls!("ATMDealDeviceAddOn"));
+mixin(EntityCalls!("DealDeviceAddOnEntity"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(ATMDealDeviceAddOn);
+    assert(DealDeviceAddOnEntity);
 
-  auto entity = ATMDealDeviceAddOn;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+    auto entity = DealDeviceAddOnEntity;
   }
 }
