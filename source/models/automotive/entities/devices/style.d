@@ -4,19 +4,23 @@ module models.automotive.entities.devices.style;
 import models.automotive;
 
 // Distinctive form or type of vehicle or device such as sedan or station wagon car, wheeled or crawler excavator, and so on.
-class DATMDeviceStyle : DOOPEntity {
-  mixin(EntityThis!("ATMDeviceStyle"));
+class DDeviceStyleEntity : DOOPEntity {
+  mixin(EntityThis!("DeviceStyleEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
-      .addValues([
-        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who modified the record."]),
+      .addValues([ // fix values
+        CreatedOnBehalfByAttribute, 
+        ModifiedOnBehalfByAttribute, 
+        OwnerIdAttribute, 
+        StateCodeAttribute, 
+        StatusCodeAttribute 
+      ])
+      .addValues([ // individual values
         "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated. "]), 
         "importSequenceNumber": IntegerAttribute, //Unique identifier of the data import or data migration that created this record. "]), 
-        "ownerId": UUIDAttribute, // Owner Id "]), 
         "ownerIdType": StringAttribute, // The type of owner, either User or Team. "]), 
         "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record "]), 
         "owningUserId": UUIDAttribute, //Unique identifier of the user that owns the activity. "]), 
@@ -27,28 +31,16 @@ class DATMDeviceStyle : DOOPEntity {
         "code": StringAttribute, // Unique code for the style. "]), 
         "deviceStyleId": UUIDAttribute, // Unique identifier for entity instances "]), 
         "deviceTypeId": UUIDAttribute, // Device type for which this style is applicable. "]), 
-        "stateCode": StringAttribute, // Status of the Device Style "]), 
-        "stateCode_display": StringAttribute, // 
-        "statusCode": StringAttribute, // Reason for the status of the Device Style "]), 
-        "statusCode_display": StringAttribute, // 
       ])
-      .registerPath("automotive_devicestyles");
+      .registerPath("automotive_devices.styles");
   }
 }
-mixin(EntityCalls!("ATMDeviceStyle"));
+mixin(EntityCalls!("DeviceStyleEntity"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(ATMDeviceStyle);
+    assert(DeviceStyleEntity);
   
-  auto entity = ATMDeviceStyle;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+    auto entity = DeviceStyleEntity;
   }
 }
