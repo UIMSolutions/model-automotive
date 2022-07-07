@@ -11,12 +11,16 @@ class DATMDeviceObservation : DOOPEntity {
     super.initialize;
 
     this
-      .addValues([
-        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the territory."]),
-        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who last modified the territory."]),
+      .addValues([ // fix values
+        CreatedOnBehalfByAttribute,
+        ModifiedOnBehalfByAttribute, 
+        OwnerIdAttribute, 
+        StateCodeAttribute, // Shows whether the account is active or inactive. Inactive accounts are read-only and can't be edited unless they are reactivated.
+        StatusCodeAttribute // Select the account's status.
+      ])
+      .addValues([ // individual values
         "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated. "]),
         "importSequenceNumber": IntegerAttribute, //Unique identifier of the data import or data migration that created this record. "]),
-        "ownerId": UUIDAttribute, // Owner Id "]),
         "ownerIdType": StringAttribute, // The type of owner, either User or Team. "]),
         "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record "]),
         "owningUserId": UUIDAttribute, //Unique identifier of the user that owns the activity. "]),
@@ -31,10 +35,6 @@ class DATMDeviceObservation : DOOPEntity {
         "serviceOrderId": UUIDAttribute, // Parent service order being worked when this observation was documented. "]),
         "severity": StringAttribute, // Severity level (observation, warning of failure). "]),
         "severity_display": StringAttribute, //
-        "stateCode": StringAttribute, // Status of the Device Observation "]),
-        "stateCode_display": StringAttribute, //
-        "statusCode": StringAttribute, // Reason for the status of the Device Observation "]),
-        "statusCode_display": StringAttribute, //
       ])
       .registerPath("automotive_deviceobservations");
   }

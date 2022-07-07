@@ -1,4 +1,4 @@
-module source.models.automotive.entities.devices.inspections.checklisttype;
+module models.automotive.entities.devices.inspections.checklisttype;
 
 @safe:
 import models.automotive;
@@ -12,8 +12,8 @@ class DDeviceInspectionChecklistTypeEntity: DOOPEntity {
 
     this
       .addValues([ // fix values
-        CreatedOnBehalfByAttribute, // Shows who created the record on behalf of another user.
-        ModifiedOnBehalfByAttribute, // Shows who last updated the record on behalf of another user.
+        CreatedOnBehalfByAttribute,
+        ModifiedOnBehalfByAttribute, 
         OwnerIdAttribute, // Owner Id
         StateCodeAttribute, // Shows whether the account is active or inactive. Inactive accounts are read-only and can't be edited unless they are reactivated.
         StatusCodeAttribute // Select the account's status.
