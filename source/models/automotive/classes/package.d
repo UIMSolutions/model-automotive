@@ -1,2 +1,2 @@
-module models.automotive.entities.classes;
+module models.automotive.classes;
 

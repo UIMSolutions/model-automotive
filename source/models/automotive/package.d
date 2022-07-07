@@ -16,6 +16,7 @@ public import uim.oop;
 public import uim.entities;
 
 // models.automotive
-public import models.automotive.entities.attributes;
-public import models.automotive.entities.classes;
-public import models.automotive.entities.entities;
+public import models.automotive.attributes;
+public import models.automotive.classes;
+public import models.automotive.elements;
+public import models.automotive.entities;
