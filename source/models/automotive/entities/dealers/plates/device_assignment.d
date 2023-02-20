@@ -7,7 +7,7 @@ import models.automotive;
 class DDealerPlateDeviceAssignmentEntity : DOOPEntity {
   mixin(EntityThis!("DealerPlateDeviceAssignmentEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
