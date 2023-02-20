@@ -8,7 +8,7 @@ class DATMDeviceLicensePlate : DOOPEntity {
   mixin(EntityThis!("ATMDeviceLicensePlate"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

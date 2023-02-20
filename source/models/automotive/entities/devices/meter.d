@@ -8,7 +8,7 @@ class DATMMeter : DOOPEntity {
   mixin(EntityThis!("ATMMeter"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
