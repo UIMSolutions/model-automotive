@@ -8,7 +8,7 @@ class DATMDeviceWarranty : DOOPEntity {
   mixin(EntityThis!("ATMDeviceWarranty"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

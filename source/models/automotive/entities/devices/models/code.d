@@ -8,7 +8,7 @@ class DDeviceModelCodeEntity : DOOPEntity {
   mixin(EntityThis!("DeviceModelCodeEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
