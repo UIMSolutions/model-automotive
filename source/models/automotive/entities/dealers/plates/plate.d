@@ -8,7 +8,7 @@ class DDealerPlateEntity : DOOPEntity {
   mixin(EntityThis!("DealerPlateEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
