@@ -8,7 +8,7 @@ class DATMDeviceInspection : DOOPEntity {
   mixin(EntityThis!("ATMDeviceInspection"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
