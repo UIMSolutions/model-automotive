@@ -7,7 +7,7 @@ import models.automotive;
 class DATMDeviceInspection : DOOPEntity {
   mixin(EntityThis!("ATMDeviceInspection"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
