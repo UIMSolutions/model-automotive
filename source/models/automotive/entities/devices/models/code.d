@@ -7,7 +7,7 @@ import models.automotive;
 class DDeviceModelCodeEntity : DOOPEntity {
   mixin(EntityThis!("DeviceModelCodeEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
