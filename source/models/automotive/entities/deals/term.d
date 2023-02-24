@@ -4,7 +4,7 @@ module models.automotive.entities.deals.term;
 import models.automotive;
 
 // Terms applicable a given type of deal.
-class DDealTermEntity : DOOPEntity {
+class DDealTermEntity : DEntity {
   mixin(EntityThis!("DealTermEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

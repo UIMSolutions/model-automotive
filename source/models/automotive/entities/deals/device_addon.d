@@ -4,7 +4,7 @@ module models.automotive.entities.deals.device_addon;
 import models.automotive;
 
 // Additional product or service offered with a given vehicle or device in a deal.
-class DDealDeviceAddOnEntity : DOOPEntity {
+class DDealDeviceAddOnEntity : DEntity {
   mixin(EntityThis!("DealDeviceAddOnEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

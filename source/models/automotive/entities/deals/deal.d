@@ -4,7 +4,7 @@ module models.automotive.entities.deals.deal;
 import models.automotive;
 
 // Business proposal for the sale of one or more vehicle or device, including optional trade-ins, add-ons and financial terms.
-class DDealEntity : DOOPEntity {
+class DDealEntity : DEntity {
   mixin(EntityThis!("DealEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

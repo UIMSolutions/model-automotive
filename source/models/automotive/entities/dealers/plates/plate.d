@@ -4,7 +4,7 @@ module models.automotive.entities.dealers.plates.plate;
 import models.automotive;
 
 // License plate applied temporarily to vehicles to provide services such as test drives.
-class DDealerPlateEntity : DOOPEntity {
+class DDealerPlateEntity : DEntity {
   mixin(EntityThis!("DealerPlateEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

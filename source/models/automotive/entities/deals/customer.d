@@ -4,7 +4,7 @@ module models.automotive.entities.deals.customer;
 import models.automotive;
 
 // Customer associated with a given deal.
-class DDealCustomerEntity : DOOPEntity {
+class DDealCustomerEntity : DEntity {
   mixin(EntityThis!("DealCustomerEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

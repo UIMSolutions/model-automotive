@@ -4,7 +4,7 @@ module models.automotive.entities.deals.device;
 import models.automotive;
 
 // Vehicle or device that is the subject of a deal, which may involve one or more vehicle or device.
-class DATMDealDevice : DOOPEntity {
+class DATMDealDevice : DEntity {
   mixin(EntityThis!("ATMDealDevice"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.automotive.entities.dealers.plates.device_assignment;
 import models.automotive;
 
 // Record of which dealer plates were used on which vehicle or device over time.
-class DDealerPlateDeviceAssignmentEntity : DOOPEntity {
+class DDealerPlateDeviceAssignmentEntity : DEntity {
   mixin(EntityThis!("DealerPlateDeviceAssignmentEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

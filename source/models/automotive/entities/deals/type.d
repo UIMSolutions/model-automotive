@@ -4,7 +4,7 @@ module models.automotive.entities.deals.type;
 import models.automotive;
 
 // Type of deal, such as new car sales, used car sales, heavy equipment sales, and so on.
-class DATMDealType : DOOPEntity {
+class DATMDealType : DEntity {
   mixin(EntityThis!("ATMDealType"));
   
   override void initialize(DConfigurationValue configSettings = null) {

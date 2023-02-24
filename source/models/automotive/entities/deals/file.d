@@ -4,7 +4,7 @@ module models.automotive.entities.deals.file;
 import models.automotive;
 
 // Container for deals relating to a given opportunity.
-class DATMDealFile : DOOPEntity {
+class DATMDealFile : DEntity {
   mixin(EntityThis!("ATMDealFile"));
   
   override void initialize(DConfigurationValue configSettings = null) {
