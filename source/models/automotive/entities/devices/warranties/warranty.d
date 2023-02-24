@@ -4,7 +4,7 @@ module models.automotive.entities.devices.warranties.warranty;
 import models.automotive;
 
 // Relationship indicating that a specific warranty applies to a specific vehicle or device.
-class DATMDeviceWarranty : DOOPEntity {
+class DATMDeviceWarranty : DEntity {
   mixin(EntityThis!("ATMDeviceWarranty"));
   
   override void initialize(DConfigurationValue configSettings = null) {

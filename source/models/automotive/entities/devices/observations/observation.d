@@ -4,7 +4,7 @@ module models.automotive.entities.devices.observations.observation;
 import models.automotive;
 
 // Important observation on the state of a given vehicle or device, typically resulting from an inspection.
-class DATMDeviceObservation : DOOPEntity {
+class DATMDeviceObservation : DEntity {
   mixin(EntityThis!("ATMDeviceObservation"));
   
   override void initialize(DConfigurationValue configSettings = null) {

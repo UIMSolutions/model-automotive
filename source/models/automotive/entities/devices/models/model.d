@@ -4,7 +4,7 @@ module models.automotive.entities.devices.models.model;
 import models.automotive;
 
 // Sub-type of a device class, which may be identified by specific engine option, body styles and other common characteristics. Breaks down further into device model codes.
-class DATMDeviceModel : DOOPEntity {
+class DATMDeviceModel : DEntity {
   mixin(EntityThis!("ATMDeviceModel"));
   
   override void initialize(DConfigurationValue configSettings = null) {

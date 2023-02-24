@@ -4,7 +4,7 @@ module models.automotive.entities.devices.observations.type;
 import models.automotive;
 
 // Type of observation, indicating severity and nature of the observation and typically used for classification and filtering of observations.
-class DATMDeviceObservationType : DOOPEntity {
+class DATMDeviceObservationType : DEntity {
   mixin(EntityThis!("ATMDeviceObservationType"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.automotive.entities.devices.warranties.limit;
 import models.automotive;
 
 // Limits of a specific warranty on a specific vehicle or device, such as maximum mileage or specific expiration date.
-class DATMDeviceWarrantyLimit : DOOPEntity {
+class DATMDeviceWarrantyLimit : DEntity {
   mixin(EntityThis!("ATMDeviceWarrantyLimit"));
   
   override void initialize(DConfigurationValue configSettings = null) {
