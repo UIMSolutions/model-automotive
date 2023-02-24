@@ -44,8 +44,7 @@ class DDealDeviceAddOnEntity : DOOPEntity {
 }
 mixin(EntityCalls!("DealDeviceAddOnEntity"));
 
-version(test_library) {
-  unittest {
+version(test_library) { unittest {
     assert(DealDeviceAddOnEntity);
 
     auto entity = DealDeviceAddOnEntity;
