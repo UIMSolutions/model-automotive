@@ -34,7 +34,7 @@ class DDeviceInspectionChecklistTypeEntity: DOOPEntity {
 }
 mixin(EntityCalls!("DeviceInspectionChecklistTypeEntity"));
 
-version(test_library) { unittest {
+version(test_model_automotive) { unittest {
     assert(DeviceInspectionChecklistTypeEntity);
   
     auto entity = DeviceInspectionChecklistTypeEntity;
