@@ -40,7 +40,7 @@ class DDealerPlateEntity : DOOPEntity {
 }
 mixin(EntityCalls!("DealerPlateEntity"));
 
-version(test_library) { unittest {
+version(test_model_automotive) { unittest {
     assert(DealerPlateEntity);
 
     auto entity = DealerPlateEntity;

@@ -35,7 +35,7 @@ class DATMDealFile : DOOPEntity {
 }
 mixin(EntityCalls!("ATMDealFile"));
 
-version(test_library) { unittest {
+version(test_model_automotive) { unittest {
     assert(ATMDealFile);
 
     auto entity = ATMDealFile;
