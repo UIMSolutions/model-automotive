@@ -40,7 +40,7 @@ class DATMDeviceLicensePlate : DOOPEntity {
 }
 mixin(EntityCalls!("ATMDeviceLicensePlate"));
 
-version(test_library) { unittest {
+version(test_model_automotive) { unittest {
     assert(APLFeedback);
     assert(ATMDeviceLicensePlate);
   
