@@ -42,8 +42,7 @@ class DATMDeviceState : DOOPEntity {
 }
 mixin(EntityCalls!("ATMDeviceState"));
 
-version(test_library) {
-  unittest {
+version(test_library) { unittest {
     assert(APLFeedback);
     assert(ATMDeviceState);
   
