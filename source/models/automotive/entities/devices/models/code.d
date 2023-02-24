@@ -43,8 +43,7 @@ class DDeviceModelCodeEntity : DOOPEntity {
 }
 mixin(EntityCalls!("DeviceModelCodeEntity"));
 
-version(test_library) {
-  unittest {
+version(test_library) { unittest {
     assert(APLFeedback);
     assert(DeviceModelCodeEntity);
   
