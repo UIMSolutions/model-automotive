@@ -4,7 +4,7 @@ module models.automotive.entities.devices.sensor;
 import models.automotive;
 
 // Sensor attached to or as part of a vehicle or device. May provide signals of device health or usage.
-class DATMDeviceSensor : DOOPEntity {
+class DATMDeviceSensor : DEntity {
   mixin(EntityThis!("ATMDeviceSensor"));
   
   override void initialize(DConfigurationValue configSettings = null) {

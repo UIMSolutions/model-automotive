@@ -4,7 +4,7 @@ module models.automotive.entities.devices.class_;
 import models.automotive;
 
 // Family of vehicles or devices for the specific brand provided by the manufacturer.
-class DDeviceClassEntity : DOOPEntity {
+class DDeviceClassEntity : DEntity {
   mixin(EntityThis!("DeviceClassEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

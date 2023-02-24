@@ -4,7 +4,7 @@ module models.automotive.entities.devices.license_plate;
 import models.automotive;
 
 // Record of license plates assigned to a given vehicle or device over time.
-class DATMDeviceLicensePlate : DOOPEntity {
+class DATMDeviceLicensePlate : DEntity {
   mixin(EntityThis!("ATMDeviceLicensePlate"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.automotive.entities.devices.brand;
 import models.automotive;
 
 // Brand name of a vehicle or device manufacturer, main vendor for a group of devices or manufacturer or main vendor for supplier items.
-class DATMDeviceBrand : DOOPEntity {
+class DATMDeviceBrand : DEntity {
   mixin(EntityThis!("ATMDeviceBrand"));
   
   override void initialize(DConfigurationValue configSettings = null) {

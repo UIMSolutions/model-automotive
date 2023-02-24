@@ -4,7 +4,7 @@ module models.automotive.entities.devices.registration;
 import models.automotive;
 
 // Record of registrations of a specific vehicle or device to specific customers over time.
-class DATMDeviceRegistration : DOOPEntity {
+class DATMDeviceRegistration : DEntity {
   mixin(EntityThis!("ATMDeviceRegistration"));
   
   override void initialize(DConfigurationValue configSettings = null) {

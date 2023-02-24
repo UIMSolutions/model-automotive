@@ -4,7 +4,7 @@ module models.automotive.entities.devices.meter;
 import models.automotive;
 
 // Usage meter attached to a specific vehicle or device, such as odometer or fuel gauge.
-class DATMMeter : DOOPEntity {
+class DATMMeter : DEntity {
   mixin(EntityThis!("ATMMeter"));
   
   override void initialize(DConfigurationValue configSettings = null) {

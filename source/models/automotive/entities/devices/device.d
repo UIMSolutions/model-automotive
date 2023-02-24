@@ -4,7 +4,7 @@ module models.automotive.entities.devices.device;
 import models.automotive;
 
 // Physical piece of equipment of considerable value such as a vehicle or a device such as an excavator, that can be tracked through its entire life cycle of trade, ownership and service and may be related to one or more customers over time.
-class DDeviceEntity : DOOPEntity {
+class DDeviceEntity : DEntity {
   mixin(EntityThis!("DeviceEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

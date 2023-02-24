@@ -4,7 +4,7 @@ module models.automotive.entities.devices.component;
 import models.automotive;
 
 // Physical or logical part of a vehicle or device.
-class DDeviceComponentEntity : DOOPEntity {
+class DDeviceComponentEntity : DEntity {
   mixin(EntityThis!("DeviceComponentEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

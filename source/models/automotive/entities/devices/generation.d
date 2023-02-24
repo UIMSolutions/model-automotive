@@ -4,7 +4,7 @@ module models.automotive.entities.devices.generation;
 import models.automotive;
 
 // Specific period in the evolution of a device class over time.
-class DATMDeviceGeneration : DOOPEntity {
+class DATMDeviceGeneration : DEntity {
   mixin(EntityThis!("ATMDeviceGeneration"));
   
   override void initialize(DConfigurationValue configSettings = null) {
