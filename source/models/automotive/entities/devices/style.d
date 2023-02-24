@@ -4,7 +4,7 @@ module models.automotive.entities.devices.style;
 import models.automotive;
 
 // Distinctive form or type of vehicle or device such as sedan or station wagon car, wheeled or crawler excavator, and so on.
-class DDeviceStyleEntity : DOOPEntity {
+class DDeviceStyleEntity : DEntity {
   mixin(EntityThis!("DeviceStyleEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

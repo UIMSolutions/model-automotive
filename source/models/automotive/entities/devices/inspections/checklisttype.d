@@ -4,7 +4,7 @@ module models.automotive.entities.devices.inspections.checklisttype;
 import models.automotive;
 
 // Type of checklist, such as pre-delivery or service.
-class DDeviceInspectionChecklistTypeEntity: DOOPEntity {
+class DDeviceInspectionChecklistTypeEntity: DEntity {
   mixin(EntityThis!("DeviceInspectionChecklistTypeEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

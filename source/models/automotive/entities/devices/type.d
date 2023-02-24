@@ -4,7 +4,7 @@ module models.automotive.entities.devices.type;
 import models.automotive;
 
 // Group of undeleted system users and undeleted teams. DeviceTypes can be used to control access to specific objects.
-class DATMDeviceType : DOOPEntity {
+class DATMDeviceType : DEntity {
   mixin(EntityThis!("ATMDeviceType"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.automotive.entities.devices.inspections.inspection;
 import models.automotive;
 
 // Record of inspections carried out on a given vehicle or device over time.
-class DATMDeviceInspection : DOOPEntity {
+class DATMDeviceInspection : DEntity {
   mixin(EntityThis!("ATMDeviceInspection"));
   
   override void initialize(DConfigurationValue configSettings = null) {

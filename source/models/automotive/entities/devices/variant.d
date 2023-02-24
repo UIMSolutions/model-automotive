@@ -4,7 +4,7 @@ module models.automotive.entities.devices.variant;
 import models.automotive;
 
 // Standard variant of a device model code, with special characteristics such as a specific OEM-fitted accessory package or being a limited edition.
-class DATMDeviceVariant : DOOPEntity {
+class DATMDeviceVariant : DEntity {
   mixin(EntityThis!("ATMDeviceVariant"));
   
   override void initialize(DConfigurationValue configSettings = null) {

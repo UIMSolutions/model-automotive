@@ -4,7 +4,7 @@ module models.automotive.entities.devices.measures.measure;
 import models.automotive;
 
 // Specific measurable quantity related to a vehicle or device that is used to track usage over time, such as miles driven, engine hours or time since purchase.
-class DATMDeviceMeasure : DOOPEntity {
+class DATMDeviceMeasure : DEntity {
   mixin(EntityThis!("ATMDeviceMeasure"));
   
   override void initialize(DConfigurationValue configSettings = null) {

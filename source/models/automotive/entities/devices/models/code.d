@@ -4,7 +4,7 @@ module models.automotive.entities.devices.models.code;
 import models.automotive;
 
 // Specific configuration of a device, such as a vehicle of specific generation, body style, engine option and transmission.
-class DDeviceModelCodeEntity : DOOPEntity {
+class DDeviceModelCodeEntity : DEntity {
   mixin(EntityThis!("DeviceModelCodeEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

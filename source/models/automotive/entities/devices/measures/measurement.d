@@ -4,7 +4,7 @@ module models.automotive.entities.devices.measures.measurement;
 import models.automotive;
 
 // Record of usage measurements for a given vehicle or device over time.
-class DATMDeviceMeasurement : DOOPEntity {
+class DATMDeviceMeasurement : DEntity {
   mixin(EntityThis!("ATMDeviceMeasurement"));
   
   override void initialize(DConfigurationValue configSettings = null) {

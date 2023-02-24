@@ -4,7 +4,7 @@ module models.automotive.entities.devices.state;
 import models.automotive;
 
 // Describes state of a vehicle or device, such as New, Used or Scrapped.
-class DATMDeviceState : DOOPEntity {
+class DATMDeviceState : DEntity {
   mixin(EntityThis!("ATMDeviceState"));
   
   override void initialize(DConfigurationValue configSettings = null) {

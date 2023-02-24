@@ -4,7 +4,7 @@ module models.automotive.entities.devices.inspections.checklist;
 import models.automotive;
 
 // Specific checklist of a given type, such as a pre-delivery inspection or a checklist used for a specific type of service.
-class DATMDeviceInspectionChecklist : DOOPEntity {
+class DATMDeviceInspectionChecklist : DEntity {
   mixin(EntityThis!("ATMDeviceInspectionChecklist"));
   
   override void initialize(DConfigurationValue configSettings = null) {
