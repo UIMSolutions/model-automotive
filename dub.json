@@ -1,6 +1,6 @@
 {
 	"authors": ["Ozan Nurettin Süel (Sicherheitsschmiede)"],
-	"copyright": "Copyright © 2017 - 2021, UI Manufaktur UG",
+	"copyright": "Copyright © 2015 - 2023, Ozan Nurettin Süel (Sicherheitsschmiede)",
 	"description": "Model for automotive applications",
 	"license": "Apache-2.0",
 	"name": "model-automotive",
