@@ -1,7 +1,5 @@
 module models.automotive;
 
-@safe:
-
 // Phobos
 public import std.stdio;
 public import std.string;

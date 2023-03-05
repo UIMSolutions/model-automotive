@@ -5,9 +5,6 @@
 **********************************************************************************************************/
 module models.automotive.entities.devices;
 
-@safe:
-import models.automotive;
-
 public import models.automotive.entities.devices.inspections;
 
 public import models.automotive.entities.devices.brand;

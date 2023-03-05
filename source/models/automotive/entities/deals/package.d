@@ -5,9 +5,6 @@
 **********************************************************************************************************/
 module models.automotive.entities.deals;
 
-@safe:
-import models.automotive;
-
 public import models.automotive.entities.deals.deal;
 
 public import models.automotive.entities.deals.device_addon;

@@ -4,8 +4,6 @@
 	Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
 module models.automotive.entities.devices.warranties;
-@safe:
-import models.automotive;
 
 // Main
 public import models.automotive.entities.devices.warranties.warranty;
